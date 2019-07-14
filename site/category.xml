@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <description>
+      To install these features, point Eclipse at this site.
+   </description>
+   <feature id="hu.blackbelt.epsilon.runtime.feature">
+      <category name="site"/>
+   </feature>
+   <category-def name="site" label="Epsilon runtime Update Site">
+      <description>
+         Epsilon runtime Update Site: contains all features in this build.
+      </description>
+   </category-def>
+</site>
