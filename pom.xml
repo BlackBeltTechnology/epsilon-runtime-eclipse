@@ -55,7 +55,7 @@
 		<timestamp>${maven.build.timestamp}</timestamp>
 		<maven.build.timestamp.format>yyyyMMddHHmmss</maven.build.timestamp.format>
 
-		<epsilon-runtime-version>1.2.0.develop_99</epsilon-runtime-version>
+		<epsilon-runtime-version>1.2.0.develop_101</epsilon-runtime-version>
 
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
