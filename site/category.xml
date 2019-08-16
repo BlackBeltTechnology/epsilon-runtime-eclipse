@@ -11,4 +11,5 @@
          Epsilon runtime Update Site: contains all features in this build.
       </description>
    </category-def>
+   <repository-reference location="http://download.eclipse.org/epsilon/updates/" enabled="true" />
 </site>
