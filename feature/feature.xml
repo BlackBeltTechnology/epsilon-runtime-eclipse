@@ -19,24 +19,18 @@
 
    <requires>
       <import feature="org.eclipse.epsilon.core.dependencies.feature" version="1.5.1.201809302027" match="compatible"/>
-      <import feature="org.eclipse.epsilon.core.dt.feature" version="1.5.1.201809302027" match="compatible"/>
       <import feature="org.eclipse.epsilon.core.feature" version="1.5.1.201809302027" match="compatible"/>
       <import feature="org.eclipse.epsilon.emc.spreadsheets.dependencies.feature" version="1.5.1.201809302027" match="compatible"/>
       <import feature="org.eclipse.epsilon.emc.spreadsheets.excel.dependencies.feature" version="1.5.1.201809302027" match="compatible"/>
-      <import feature="org.eclipse.epsilon.emc.spreadsheets.excel.dt.feature" version="1.5.1.201809302027" match="compatible"/>
       <import feature="org.eclipse.epsilon.emc.spreadsheets.excel.feature" version="1.5.1.201809302027" match="compatible"/>
       <import feature="org.eclipse.epsilon.emc.spreadsheets.feature" version="1.5.1.201809302027" match="compatible"/>
       <import feature="org.eclipse.epsilon.emc.spreadsheets.google.dependencies.feature" version="1.5.1.201809302027" match="compatible"/>
-      <import feature="org.eclipse.epsilon.emc.spreadsheets.google.dt.feature" version="1.5.1.201809302027" match="compatible"/>
       <import feature="org.eclipse.epsilon.emc.spreadsheets.google.feature" version="1.5.1.201809302027" match="compatible"/>
-      <import feature="org.eclipse.epsilon.emf.dt.dependencies.feature" version="1.5.1.201809302027" match="compatible"/>
-      <import feature="org.eclipse.epsilon.emf.dt.feature" version="1.5.1.201809302027" match="compatible"/>
       <import feature="org.eclipse.epsilon.emf.feature" version="1.5.1.201809302027" match="compatible"/>
       <import feature="org.eclipse.epsilon.evl.emf.validation.feature" version="1.5.1.201809302027" match="compatible"/>
       <import feature="org.eclipse.epsilon.ewl.emf.feature" version="1.5.1.201809302027" match="compatible"/>
       <import feature="org.eclipse.epsilon.ewl.gmf.feature" version="1.5.1.201809302027" match="compatible"/>
       <import feature="org.eclipse.epsilon.hutn.dependencies.feature" version="1.5.1.201809302027" match="compatible"/>
-      <import feature="org.eclipse.epsilon.hutn.dt.feature" version="1.5.1.201809302027" match="compatible"/>
       <import feature="org.eclipse.epsilon.hutn.feature" version="1.5.1.201809302027" match="compatible"/>
       <import feature="org.eclipse.emf" version="2.19.0.v20190704-0632"/>
       <import plugin="org.apache.log4j"/>
