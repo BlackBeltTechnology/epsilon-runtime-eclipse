@@ -292,6 +292,9 @@
 										</versionRange>
 										<goals>
 											<goal>properties</goal>
+											<goal>
+												copy-dependencies
+											</goal>
 										</goals>
 									</pluginExecutionFilter>
 									<action>
