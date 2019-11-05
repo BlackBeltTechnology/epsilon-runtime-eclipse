@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<?xml version='1.0' encoding='UTF-8'?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
     <groupId>hu.blackbelt.epsilon</groupId>
@@ -42,7 +43,7 @@
 		<timestamp>${maven.build.timestamp}</timestamp>
 		<maven.build.timestamp.format>yyyyMMddHHmmss</maven.build.timestamp.format>
 
-		<epsilon-runtime-version>1.2.0.develop_101</epsilon-runtime-version>
+		<epsilon-runtime-version>1.2.0.20191018_105940_dc9d257_develop</epsilon-runtime-version>
 
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
@@ -399,15 +400,15 @@
 		</profile>
 
 		<profile>
-			<id>release-blackbelt</id>
+			<id>release-judong</id>
 			<distributionManagement>
 				<snapshotRepository>
-					<id>blackbelt-nexus-distribution</id>
-					<url>https://nexus.blackbelt.cloud/repository/maven-judo-release/</url>
+					<id>judong-nexus-distribution</id>
+					<url>${env.JUDONG_MAVEN_UPSTREAM_SNAPSHOT}</url>
 				</snapshotRepository>
 				<repository>
-					<id>blackbelt-nexus-distribution</id>
-					<url>https://nexus.blackbelt.cloud/repository/maven-judo-release/</url>
+					<id>judong-nexus-distribution</id>
+					<url>${env.JUDONG_MAVEN_UPSTREAM_RELEASE}</url>
 				</repository>
 			</distributionManagement>
 		</profile>
@@ -503,34 +504,34 @@
                 </plugins>
             </build>
         </profile>
-        
-        <profile>
-            <id>release-p2-blackbelt</id>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.codehaus.mojo</groupId>
-                        <artifactId>wagon-maven-plugin</artifactId>
-                        <version>2.0.0</version>
-                        <executions>
-                            <execution>
-                                <id>upload-respoitory</id>
-                                <phase>deploy</phase>
-                                <goals>
-                                    <goal>upload</goal>
-                                </goals>
-                                <configuration>
-                                    <serverId>blackbelt-nexus-distribution</serverId>
-                                    <fromDir>${basedir}/site/target/repository</fromDir>
-                                    <includes>*/**</includes>
-                                    <url>dav:https://nexus.blackbelt.cloud/repository/p2-judo</url>
-                                    <toDir>${project-shortname}/${project.version}</toDir>
-                                </configuration>
-                            </execution>
-                        </executions>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
+
+		<profile>
+			<id>release-p2-judong</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.codehaus.mojo</groupId>
+						<artifactId>wagon-maven-plugin</artifactId>
+						<version>2.0.0</version>
+						<executions>
+							<execution>
+								<id>upload-respoitory</id>
+								<phase>deploy</phase>
+								<goals>
+									<goal>upload</goal>
+								</goals>
+								<configuration>
+									<serverId>judong-nexus-distribution</serverId>
+									<fromDir>${basedir}/site/target/repository</fromDir>
+									<includes>*/**</includes>
+									<url>dav:${env.JUDONG_P2_UPSTREAM}</url>
+									<toDir>${project-shortname}/${project.version}</toDir>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
     </profiles>
 </project>
