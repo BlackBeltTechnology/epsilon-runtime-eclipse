@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
     <groupId>hu.blackbelt.epsilon</groupId>
     <artifactId>hu.blackbelt.epsilon.runtime</artifactId>
 	<packaging>pom</packaging>
-    <version>1.2.0-SNAPSHOT</version>
+    <version>1.2.0</version>
 
 	<name>Epsilon :: Runtime :: Eclipse</name>
 
@@ -35,18 +35,13 @@
         </developer>
     </developers>
 
-	<repositories>
-		<repository>
-			<id>eclipse</id>
-			<layout>p2</layout>
-			<url>${eclipse-p2-base}</url>
-		</repository>
-        <repository>
-            <id>epsilon</id>
-            <layout>p2</layout>
-            <url>http://download.eclipse.org/epsilon/updates/</url>
-        </repository>
-    </repositories>
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>https://opensource.org/licenses/Apache-2.0</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
 
 	<properties>
         <project-shortname>epsilon-runtime-eclipse</project-shortname>
@@ -55,7 +50,7 @@
 		<timestamp>${maven.build.timestamp}</timestamp>
 		<maven.build.timestamp.format>yyyyMMddHHmmss</maven.build.timestamp.format>
 
-		<epsilon-runtime-version>1.2.0.develop_96</epsilon-runtime-version>
+		<epsilon-runtime-version>1.2.1</epsilon-runtime-version>
 
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
@@ -77,8 +72,14 @@
 				<artifactId>target-platform-configuration</artifactId>
 				<version>${tycho-version}</version>
 				<configuration>
-					<pomDependencies>consider</pomDependencies>
-					<environments>
+                    <target>
+                        <artifact>
+                            <groupId>hu.blackbelt.epsilon</groupId>
+                            <artifactId>hu.blackbelt.epsilon.runtime.targetdefinition</artifactId>
+                            <version>${project.version}</version>
+                        </artifact>
+                    </target>
+                    <environments>
 						<environment>
 							<os>linux</os>
 							<ws>gtk</ws>
@@ -299,6 +300,9 @@
 										</versionRange>
 										<goals>
 											<goal>properties</goal>
+											<goal>
+												copy-dependencies
+											</goal>
 										</goals>
 									</pluginExecutionFilter>
 									<action>
@@ -350,6 +354,7 @@
                 </property>
             </activation>
             <modules>
+                <module>targetdefinition</module>
                 <module>epsilon-runtime-eclipse</module>
                 <module>feature</module>
                 <module>site</module>
@@ -402,15 +407,15 @@
 		</profile>
 
 		<profile>
-			<id>release-blackbelt</id>
+			<id>release-judong</id>
 			<distributionManagement>
 				<snapshotRepository>
-					<id>blackbelt-nexus-distribution</id>
-					<url>https://nexus.blackbelt.cloud/repository/maven-judo-release/</url>
+					<id>judong-nexus-distribution</id>
+					<url>${env.JUDONG_MAVEN_UPSTREAM_SNAPSHOT}</url>
 				</snapshotRepository>
 				<repository>
-					<id>blackbelt-nexus-distribution</id>
-					<url>https://nexus.blackbelt.cloud/repository/maven-judo-release/</url>
+					<id>judong-nexus-distribution</id>
+					<url>${env.JUDONG_MAVEN_UPSTREAM_RELEASE}</url>
 				</repository>
 			</distributionManagement>
 		</profile>
@@ -506,34 +511,34 @@
                 </plugins>
             </build>
         </profile>
-        
-        <profile>
-            <id>release-p2-blackbelt</id>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.codehaus.mojo</groupId>
-                        <artifactId>wagon-maven-plugin</artifactId>
-                        <version>2.0.0</version>
-                        <executions>
-                            <execution>
-                                <id>upload-respoitory</id>
-                                <phase>deploy</phase>
-                                <goals>
-                                    <goal>upload</goal>
-                                </goals>
-                                <configuration>
-                                    <serverId>blackbelt-nexus-distribution</serverId>
-                                    <fromDir>${basedir}/site/target/repository</fromDir>
-                                    <includes>*/**</includes>
-                                    <url>dav:https://nexus.blackbelt.cloud/repository/p2-judo</url>
-                                    <toDir>${project-shortname}/${project.version}</toDir>
-                                </configuration>
-                            </execution>
-                        </executions>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
+
+		<profile>
+			<id>release-p2-judong</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.codehaus.mojo</groupId>
+						<artifactId>wagon-maven-plugin</artifactId>
+						<version>2.0.0</version>
+						<executions>
+							<execution>
+								<id>upload-respoitory</id>
+								<phase>deploy</phase>
+								<goals>
+									<goal>upload</goal>
+								</goals>
+								<configuration>
+									<serverId>judong-nexus-distribution</serverId>
+									<fromDir>${basedir}/site/target/repository</fromDir>
+									<includes>*/**</includes>
+									<url>dav:${env.JUDONG_P2_UPSTREAM}</url>
+									<toDir>${project-shortname}/${project.version}</toDir>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
     </profiles>
 </project>

@@ -2,7 +2,7 @@
 <feature
       id="hu.blackbelt.epsilon.runtime.feature"
       label="Epsilon runtime feature"
-      version="1.2.0.qualifier"
+      version="1.2.0"
       provider-name="BlackBelt Technology">
 
    <description url="http://www.blackbelt.hu">
@@ -18,63 +18,24 @@
    </license>
 
    <requires>
-      <import plugin="org.eclipse.core.runtime"/>
-      <import plugin="org.eclipse.emf.ecore"/>
-      <import plugin="org.eclipse.emf.ecore.xmi"/>
-      <import plugin="org.eclipse.emf.mwe2.launch"/>
+      <import feature="org.eclipse.epsilon.core.dependencies.feature" version="1.5.1.201809302027" match="compatible"/>
+      <import feature="org.eclipse.epsilon.core.feature" version="1.5.1.201809302027" match="compatible"/>
+      <import feature="org.eclipse.epsilon.emc.spreadsheets.dependencies.feature" version="1.5.1.201809302027" match="compatible"/>
+      <import feature="org.eclipse.epsilon.emc.spreadsheets.excel.dependencies.feature" version="1.5.1.201809302027" match="compatible"/>
+      <import feature="org.eclipse.epsilon.emc.spreadsheets.excel.feature" version="1.5.1.201809302027" match="compatible"/>
+      <import feature="org.eclipse.epsilon.emc.spreadsheets.feature" version="1.5.1.201809302027" match="compatible"/>
+      <import feature="org.eclipse.epsilon.emc.spreadsheets.google.dependencies.feature" version="1.5.1.201809302027" match="compatible"/>
+      <import feature="org.eclipse.epsilon.emc.spreadsheets.google.feature" version="1.5.1.201809302027" match="compatible"/>
+      <import feature="org.eclipse.epsilon.emf.feature" version="1.5.1.201809302027" match="compatible"/>
+      <import feature="org.eclipse.epsilon.evl.emf.validation.feature" version="1.5.1.201809302027" match="compatible"/>
+      <import feature="org.eclipse.epsilon.ewl.emf.feature" version="1.5.1.201809302027" match="compatible"/>
+      <import feature="org.eclipse.epsilon.ewl.gmf.feature" version="1.5.1.201809302027" match="compatible"/>
+      <import feature="org.eclipse.epsilon.hutn.dependencies.feature" version="1.5.1.201809302027" match="compatible"/>
+      <import feature="org.eclipse.epsilon.hutn.feature" version="1.5.1.201809302027" match="compatible"/>
+      <import feature="org.eclipse.emf" version="2.19.0.v20190704-0632"/>
       <import plugin="org.apache.log4j"/>
-      <import plugin="org.eclipse.equinox.common"/>
-      <import plugin="org.apache.commons.logging"/>
-      <import plugin="org.slf4j.api"/>
-      
-      <import plugin="org.eclipse.epsilon.common"/>
-      <import plugin="org.eclipse.epsilon.dependencies"/>
-      <import plugin="org.eclipse.epsilon.ecl.engine"/>
-      <import plugin="org.eclipse.epsilon.egl.engine"/>
-      <import plugin="org.eclipse.epsilon.egl.traceability.fine"/>
-      <import plugin="org.eclipse.epsilon.emc.bibtex"/>
-      <import plugin="org.eclipse.epsilon.emc.composite"/>
-      <import plugin="org.eclipse.epsilon.emc.csv"/>
-      <import plugin="org.eclipse.epsilon.emc.emf"/>
-      <import plugin="org.eclipse.epsilon.emc.emf.decorator"/>
-      <import plugin="org.eclipse.epsilon.emc.emf.virtual"/>
-      <import plugin="org.eclipse.epsilon.emc.graphml"/>
-      <import plugin="org.eclipse.epsilon.emc.hutn"/>
-      <import plugin="org.eclipse.epsilon.emc.muddle"/>
-      <import plugin="org.eclipse.epsilon.emc.plainxml"/>
-      <import plugin="org.eclipse.epsilon.emc.simulink"/>
-      <import plugin="org.eclipse.epsilon.emc.spreadsheets"/>
-      <import plugin="org.eclipse.epsilon.emc.spreadsheets.dependencies"/>
-      <import plugin="org.eclipse.epsilon.emc.spreadsheets.excel"/>
-      <import plugin="org.eclipse.epsilon.emc.spreadsheets.excel.dependencies"/>
-      <import plugin="org.eclipse.epsilon.emc.spreadsheets.google"/>
-      <import plugin="org.eclipse.epsilon.emc.spreadsheets.google.dependencies"/>
-      <import plugin="org.eclipse.epsilon.emc.uml"/>
-      <import plugin="org.eclipse.epsilon.eml.engine"/>
-      <import plugin="org.eclipse.epsilon.eol.engine"/>
-      <import plugin="org.eclipse.epsilon.eol.tools"/>
-      <import plugin="org.eclipse.epsilon.epl.engine"/>
-      <import plugin="org.eclipse.epsilon.erl.engine"/>
-      <import plugin="org.eclipse.epsilon.etl.engine"/>
-      <import plugin="org.eclipse.epsilon.eunit.dt"/>
-      <import plugin="org.eclipse.epsilon.eunit.engine"/>
-      <import plugin="org.eclipse.epsilon.eunit.junit"/>
-      <import plugin="org.eclipse.epsilon.evl.dt"/>
-      <import plugin="org.eclipse.epsilon.evl.emf.validation"/>
-      <import plugin="org.eclipse.epsilon.evl.engine"/>
-      <import plugin="org.eclipse.epsilon.ewl.emf"/>
-      <import plugin="org.eclipse.epsilon.ewl.engine"/>
-      <import plugin="org.eclipse.epsilon.flexmi"/>
-      <import plugin="org.eclipse.epsilon.flock.engine"/>
-      <import plugin="org.eclipse.epsilon.hutn.engine"/>
-      <import plugin="org.eclipse.epsilon.hutn.model"/>
-      <import plugin="org.eclipse.epsilon.hutn.model.config"/>
-      <import plugin="org.eclipse.epsilon.hutn.unparser"/>
-      <import plugin="org.eclipse.epsilon.hutn.xmi"/>
-      <import plugin="org.eclipse.epsilon.perspective"/>
-      <import plugin="org.eclipse.epsilon.profiling"/>
-      <import plugin="org.eclipse.epsilon.workflow"/>
-      <import plugin="org.eclipse.epsilon.workflow.emf"/>
+      <import plugin="org.eclipse.emf.ecore.xmi"/>
+      <import plugin="org.eclipse.emf.ecore"/>
    </requires>
 
    <plugin
