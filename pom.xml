@@ -35,6 +35,14 @@
         </developer>
     </developers>
 
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>https://opensource.org/licenses/Apache-2.0</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
 	<properties>
         <project-shortname>epsilon-runtime-eclipse</project-shortname>
         <project-repositoryId>BlackBeltTechnology/epsilon-runtime-eclipse</project-repositoryId>
@@ -42,7 +50,7 @@
 		<timestamp>${maven.build.timestamp}</timestamp>
 		<maven.build.timestamp.format>yyyyMMddHHmmss</maven.build.timestamp.format>
 
-		<epsilon-runtime-version>1.2.0</epsilon-runtime-version>
+		<epsilon-runtime-version>1.2.1</epsilon-runtime-version>
 
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
