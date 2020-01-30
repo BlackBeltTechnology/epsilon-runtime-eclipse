@@ -2,7 +2,7 @@
 <feature
       id="hu.blackbelt.epsilon.runtime.feature"
       label="Epsilon runtime feature"
-      version="1.2.0.qualifier"
+      version="1.2.0"
       provider-name="BlackBelt Technology">
 
    <description url="http://www.blackbelt.hu">
