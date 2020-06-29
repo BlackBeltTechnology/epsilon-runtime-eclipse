@@ -14,5 +14,5 @@
    
    <!-- This is currently ignored by Tycho, see https://bugs.eclipse.org/bugs/show_bug.cgi?id=453708 -->
    <!-- The tycho plugin 1.5.0 will fix it -->
-   <repository-reference location="http://download.eclipse.org/epsilon/updates/" enabled="true" />
+   <repository-reference location="https://download.eclipse.org/epsilon/updates/1.5/" enabled="true" />
 </site>
