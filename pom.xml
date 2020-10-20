@@ -4,7 +4,7 @@
     <groupId>hu.blackbelt.epsilon</groupId>
     <artifactId>hu.blackbelt.epsilon.runtime</artifactId>
 	<packaging>pom</packaging>
-    <version>1.2.2</version>
+    <version>1.2.4</version>
 
 	<name>Epsilon :: Runtime :: Eclipse</name>
 
@@ -50,12 +50,12 @@
 		<timestamp>${maven.build.timestamp}</timestamp>
 		<maven.build.timestamp.format>yyyyMMddHHmmss</maven.build.timestamp.format>
 
-		<epsilon-runtime-version>1.2.2</epsilon-runtime-version>
+		<epsilon-runtime-version>1.2.4</epsilon-runtime-version>
 
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<tycho-version>1.4.0</tycho-version>
-		<eclipse-p2-base>http://download.eclipse.org/releases/2019-03</eclipse-p2-base>
+		<eclipse-p2-base>https://download.eclipse.org/releases/2019-03</eclipse-p2-base>
 	</properties>
 
 	<build>

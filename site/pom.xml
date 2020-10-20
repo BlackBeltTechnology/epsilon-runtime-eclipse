@@ -6,7 +6,7 @@
     <parent>
         <groupId>hu.blackbelt.epsilon</groupId>
         <artifactId>hu.blackbelt.epsilon.runtime</artifactId>
-        <version>1.2.2</version>
+        <version>1.2.4</version>
         <relativePath>../</relativePath>
     </parent>
 
@@ -33,7 +33,7 @@
                                 <update.site.description>Use this URL in Eclipse to install</update.site.description>
                             </symbols>
                             <associateSites>
-                                <site>http://download.eclipse.org/epsilon/updates/</site>
+                                <site>https://download.eclipse.org/epsilon/updates/1.5/</site>
                             </associateSites>
                         </configuration>
                     </execution>
