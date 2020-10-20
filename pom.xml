@@ -4,7 +4,7 @@
     <groupId>hu.blackbelt.epsilon</groupId>
     <artifactId>hu.blackbelt.epsilon.runtime</artifactId>
 	<packaging>pom</packaging>
-    <version>1.2.4</version>
+    <version>1.2.5-SNAPSHOT</version>
 
 	<name>Epsilon :: Runtime :: Eclipse</name>
 
