@@ -68,3 +68,22 @@ Export-Package: hu.blackbelt.epsilon.runtime.execution;version="1.2.4.qualifier"
    org.eclipse.emf.ecore.xmi.impl,
    hu.blackbelt.epsilon.runtime.execution.model.emf",
  hu.blackbelt.epsilon.runtime.utils;version="1.2.4.qualifier"
+Import-Package: com.google.common.base,
+ com.google.common.collect,
+ org.slf4j;version="[1.6.0,2.0.0)"
+Require-Bundle: org.eclipse.epsilon.common,
+ org.eclipse.epsilon.ecl.engine,
+ org.eclipse.epsilon.egl.engine,
+ org.eclipse.epsilon.emc.composite,
+ org.eclipse.epsilon.emc.csv,
+ org.eclipse.epsilon.emc.emf,
+ org.eclipse.epsilon.emc.emf.decorator,
+ org.eclipse.epsilon.emc.plainxml,
+ org.eclipse.epsilon.emc.spreadsheets,
+ org.eclipse.epsilon.eol.engine,
+ org.eclipse.epsilon.eol.tools,
+ org.eclipse.epsilon.etl.engine,
+ org.eclipse.epsilon.evl.emf.validation,
+ org.eclipse.epsilon.evl.engine,
+ org.eclipse.epsilon.hutn.engine,
+ org.eclipse.epsilon.hutn.model
