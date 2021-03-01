@@ -6,15 +6,88 @@
    <feature id="hu.blackbelt.epsilon.runtime.feature">
       <category name="site"/>
    </feature>
+   <feature id="org.eclipse.epsilon.core.dt.feature">
+      <category name="epsilon"/>
+   </feature>
+   <feature id="org.eclipse.epsilon.core.feature">
+      <category name="epsilon"/>
+   </feature>
+   <feature id="org.eclipse.epsilon.emc.csv.dt.feature">
+      <category name="epsilon"/>
+   </feature>
+   <feature id="org.eclipse.epsilon.emc.csv.feature">
+      <category name="epsilon"/>
+   </feature>
+   <feature id="org.eclipse.epsilon.emc.graphml.feature">
+      <category name="epsilon"/>
+   </feature>
+   <feature id="org.eclipse.epsilon.emc.spreadsheets.excel.dt.feature">
+      <category name="epsilon"/>
+   </feature>
+   <feature id="org.eclipse.epsilon.emc.spreadsheets.excel.feature">
+      <category name="epsilon"/>
+   </feature>
+   <feature id="org.eclipse.epsilon.emc.spreadsheets.feature">
+      <category name="epsilon"/>
+   </feature>
+   <feature id="org.eclipse.epsilon.emc.spreadsheets.google.dt.feature">
+      <category name="epsilon"/>
+   </feature>
+   <feature id="org.eclipse.epsilon.emc.spreadsheets.google.feature">
+      <category name="epsilon"/>
+   </feature>
+   <feature id="org.eclipse.epsilon.emf.dt.feature">
+      <category name="epsilon"/>
+   </feature>
+   <feature id="org.eclipse.epsilon.emf.feature">
+      <category name="epsilon"/>
+   </feature>
+   <feature id="org.eclipse.epsilon.eugenia.feature">
+      <category name="epsilon"/>
+   </feature>
+   <feature id="org.eclipse.epsilon.eunit.dt.emf.feature">
+      <category name="epsilon"/>
+   </feature>
+   <feature id="org.eclipse.epsilon.evl.emf.validation.feature">
+      <category name="epsilon"/>
+   </feature>
+   <feature id="org.eclipse.epsilon.ewl.emf.feature">
+      <category name="epsilon"/>
+   </feature>
+   <feature id="org.eclipse.epsilon.ewl.gmf.feature">
+      <category name="epsilon"/>
+   </feature>
+   <feature id="org.eclipse.epsilon.flexmi.dt.feature">
+      <category name="epsilon"/>
+   </feature>
+   <feature id="org.eclipse.epsilon.flexmi.feature">
+      <category name="epsilon"/>
+   </feature>
+   <feature id="org.eclipse.epsilon.hutn.dt.feature">
+      <category name="epsilon"/>
+   </feature>
+   <feature id="org.eclipse.epsilon.hutn.feature">
+      <category name="epsilon"/>
+   </feature>
+   <feature id="org.eclipse.epsilon.picto.feature">
+      <category name="epsilon"/>
+   </feature>
+   <feature id="org.eclipse.epsilon.simulink.dt.feature">
+      <category name="epsilon"/>
+   </feature>
+   <feature id="org.eclipse.epsilon.simulink.feature">
+      <category name="epsilon"/>
+   </feature>
+   <feature id="org.eclipse.epsilon.uml.dt.feature">
+      <category name="epsilon"/>
+   </feature>
+   <feature id="org.eclipse.epsilon.uml.feature">
+      <category name="epsilon"/>
+   </feature>
    <category-def name="site" label="Epsilon runtime Update Site">
       <description>
          Epsilon runtime Update Site: contains all features in this build.
       </description>
    </category-def>
-   
-   <!-- This is currently ignored by Tycho, see https://bugs.eclipse.org/bugs/show_bug.cgi?id=453708 -->
-   <!-- The tycho plugin 1.5.0 will fix it -->
-   <!--
-   <repository-reference location="https://download.eclipse.org/epsilon/updates/1.5/" enabled="true" />
-   -->
+   <category-def name="epsilon" label="epsilon"/>
 </site>
