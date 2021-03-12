@@ -18,11 +18,12 @@
    </license>
 
    <requires>
+      <import feature="org.eclipse.emf" version="2.19.0.v20190704-0632"/>
       <import plugin="org.eclipse.epsilon.common"/>
       <import plugin="com.google.guava"/>
-      <import feature="org.eclipse.emf" version="2.19.0.v20190704-0632"/>
       <import plugin="org.eclipse.epsilon.ecl.engine"/>
       <import plugin="org.eclipse.epsilon.egl.engine"/>
+      <import plugin="org.eclipse.epsilon.emg.engine"/>
       <import plugin="org.eclipse.epsilon.emc.composite"/>
       <import plugin="org.eclipse.epsilon.emc.csv"/>
       <import plugin="org.eclipse.epsilon.emc.emf"/>
@@ -37,6 +38,38 @@
       <import plugin="org.eclipse.epsilon.hutn.engine"/>
       <import plugin="org.eclipse.epsilon.hutn.model"/>
       <import plugin="org.slf4j.api"/>
+      <import plugin="org.eclipse.epsilon.antlr.postprocessor"/>
+      <import plugin="org.eclipse.epsilon.antlr.postprocessor.model"/>
+      <import plugin="org.eclipse.epsilon.egl.traceability.fine"/>
+      <import plugin="org.eclipse.epsilon.emc.bibtex"/>
+      <import plugin="org.eclipse.epsilon.emc.emf.virtual"/>
+      <import plugin="org.eclipse.epsilon.emc.graphml"/>
+      <import plugin="org.eclipse.epsilon.emc.hutn"/>
+      <import plugin="org.eclipse.epsilon.emc.muddle"/>
+      <import plugin="org.eclipse.epsilon.emc.simulink"/>
+      <import plugin="org.eclipse.epsilon.emc.simulink.common"/>
+      <import plugin="org.eclipse.epsilon.emc.simulink.dictionary"/>
+      <import plugin="org.eclipse.epsilon.emc.simulink.requirement"/>
+      <import plugin="org.eclipse.epsilon.emc.spreadsheets.excel"/>
+      <import plugin="org.eclipse.epsilon.emc.spreadsheets.google"/>
+      <import plugin="org.eclipse.epsilon.emc.uml"/>
+      <import plugin="org.eclipse.epsilon.eml.engine"/>
+      <import plugin="org.eclipse.epsilon.epl.engine"/>
+      <import plugin="org.eclipse.epsilon.erl.engine"/>
+      <import plugin="org.eclipse.epsilon.eunit.engine"/>
+      <import plugin="org.eclipse.epsilon.ewl.emf"/>
+      <import plugin="org.eclipse.epsilon.ewl.engine"/>
+      <import plugin="org.eclipse.epsilon.flexmi"/>
+      <import plugin="org.eclipse.epsilon.flock.engine"/>
+      <import plugin="org.eclipse.epsilon.hutn.model.antlrAst"/>
+      <import plugin="org.eclipse.epsilon.hutn.model.config"/>
+      <import plugin="org.eclipse.epsilon.hutn.unparser"/>
+      <import plugin="org.eclipse.epsilon.hutn.xmi"/>
+      <import plugin="org.eclipse.epsilon.picto"/>
+      <import plugin="org.eclipse.epsilon.pinset.engine"/>
+      <import plugin="org.eclipse.epsilon.profiling"/>
+      <import plugin="org.eclipse.epsilon.workflow"/>
+      <import plugin="org.eclipse.epsilon.workflow.emf"/>
    </requires>
 
    <plugin

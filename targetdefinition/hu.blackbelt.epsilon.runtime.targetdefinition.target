@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?pde?>
-<target includeMode="feature" name="hu.blackbelt.epsilon.runtime.targetdefinition.target" sequenceNumber="1558342632">
+<target includeMode="feature" name="hu.blackbelt.epsilon.runtime.targetdefinition.target" sequenceNumber="1558342634">
   <locations>
 	<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="false" type="InstallableUnit">
 		<unit id="org.eclipse.license.feature.group" version="0.0.0"/>
@@ -95,27 +95,6 @@
 
 	  <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
 		  <repository location="https://download.eclipse.org/epsilon/updates/2.2/"/>
-		  <!--
-		  <unit id="org.eclipse.epsilon.core.dt.feature.feature.group" version="2.2.0.202009032353"/>
-		  <unit id="org.eclipse.epsilon.core.feature.feature.group" version="2.2.0.202009032353"/>
-		  <unit id="org.eclipse.epsilon.emc.graphml.feature.feature.group" version="2.2.0.202009032353"/>
-		  <unit id="org.eclipse.epsilon.emc.spreadsheets.excel.dt.feature.feature.group" version="2.2.0.202009032353"/>
-		  <unit id="org.eclipse.epsilon.emc.spreadsheets.excel.feature.feature.group" version="2.2.0.202009032353"/>
-		  <unit id="org.eclipse.epsilon.emc.spreadsheets.feature.feature.group" version="2.2.0.202009032353"/>
-		  <unit id="org.eclipse.epsilon.emc.spreadsheets.google.dt.feature.feature.group" version="2.2.0.202009032353"/>
-		  <unit id="org.eclipse.epsilon.emc.spreadsheets.google.feature.feature.group" version="2.2.0.202009032353"/>
-		  <unit id="org.eclipse.epsilon.emf.dt.feature.feature.group" version="2.2.0.202009032353"/>
-		  <unit id="org.eclipse.epsilon.emf.feature.feature.group" version="2.2.0.202009032353"/>
-		  <unit id="org.eclipse.epsilon.eunit.dt.emf.feature.feature.group" version="2.2.0.202009032353"/>
-		  <unit id="org.eclipse.epsilon.evl.emf.validation.feature.feature.group" version="2.2.0.202009032353"/>
-		  <unit id="org.eclipse.epsilon.ewl.emf.feature.feature.group" version="2.2.0.202009032353"/>
-		  <unit id="org.eclipse.epsilon.ewl.gmf.feature.feature.group" version="2.2.0.202009032353"/>
-		  <unit id="org.eclipse.epsilon.simulink.dt.feature.feature.group" version="2.2.0.202009032353"/>
-		  <unit id="org.eclipse.epsilon.simulink.feature.feature.group" version="2.2.0.202009032353"/>
-		  <unit id="org.eclipse.epsilon.uml.dt.feature.feature.group" version="2.2.0.202009032353"/>
-		  <unit id="org.eclipse.epsilon.uml.feature.feature.group" version="2.2.0.202009032353"/>
-		  <unit id="org.eclipse.epsilon.hutn.dt.feature.feature.group" version="2.2.0.202009032353"/>
-		  <unit id="org.eclipse.epsilon.hutn.feature.feature.group" version="2.2.0.202009032353"/> -->
 		  <unit id="org.eclipse.epsilon.core.dt.feature.feature.group" version="2.2.0.202009032353"/>
 		  <unit id="org.eclipse.epsilon.core.feature.feature.group" version="2.2.0.202009032353"/>
 		  <unit id="org.eclipse.epsilon.emc.csv.dt.feature.feature.group" version="2.2.0.202009032353"/>
@@ -128,7 +107,6 @@
 		  <unit id="org.eclipse.epsilon.emc.spreadsheets.google.feature.feature.group" version="2.2.0.202009032353"/>
 		  <unit id="org.eclipse.epsilon.emf.dt.feature.feature.group" version="2.2.0.202009032353"/>
 		  <unit id="org.eclipse.epsilon.emf.feature.feature.group" version="2.2.0.202009032353"/>
-		  <unit id="org.eclipse.epsilon.eugenia.feature.feature.group" version="2.2.0.202009032353"/>
 		  <unit id="org.eclipse.epsilon.eunit.dt.emf.feature.feature.group" version="2.2.0.202009032353"/>
 		  <unit id="org.eclipse.epsilon.evl.emf.validation.feature.feature.group" version="2.2.0.202009032353"/>
 		  <unit id="org.eclipse.epsilon.ewl.emf.feature.feature.group" version="2.2.0.202009032353"/>
