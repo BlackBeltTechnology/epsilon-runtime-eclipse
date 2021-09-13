@@ -5,8 +5,7 @@
     <parent>
         <groupId>hu.blackbelt.epsilon</groupId>
         <artifactId>hu.blackbelt.epsilon.runtime</artifactId>
-        <version>1.3.0-SNAPSHOT</version>
-        <relativePath>../</relativePath>
+        <version>1.4.0-SNAPSHOT</version>
     </parent>
     <artifactId>hu.blackbelt.epsilon.runtime.targetdefinition</artifactId>
     <packaging>eclipse-target-definition</packaging>
