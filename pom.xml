@@ -50,7 +50,7 @@
 		<timestamp>${maven.build.timestamp}</timestamp>
 		<maven.build.timestamp.format>yyyyMMddHHmmss</maven.build.timestamp.format>
 
-		<epsilon-runtime-version>1.4.0.20210913_123812_476042c_feature_JNG_2524_UpdateEpsilon</epsilon-runtime-version>
+		<epsilon-runtime-version>1.4.0.20210913_165532_89231f4_develop</epsilon-runtime-version>
 
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
