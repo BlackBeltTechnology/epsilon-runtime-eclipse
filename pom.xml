@@ -421,11 +421,11 @@
 			<distributionManagement>
 				<snapshotRepository>
 					<id>dummy-distribution</id>
-					<url>file:///tmp/maven-snapshot/</url>
+					<url>file:///tmp/${project.version}/maven-snapshot/</url>
 				</snapshotRepository>
 				<repository>
 					<id>dummy-distribution</id>
-					<url>file:///tmp/maven-release/</url>
+					<url>file:///tmp/${project.version}/maven-release/</url>
 				</repository>
 			</distributionManagement>
 		</profile>
