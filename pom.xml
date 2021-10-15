@@ -4,7 +4,7 @@
     <groupId>hu.blackbelt.epsilon</groupId>
     <artifactId>hu.blackbelt.epsilon.runtime</artifactId>
 	<packaging>pom</packaging>
-    <version>1.4.0-SNAPSHOT</version>
+    <version>${revision}</version>
 
 	<name>Epsilon :: Runtime :: Eclipse</name>
 
@@ -44,6 +44,9 @@
     </licenses>
 
 	<properties>
+	    <revision>1.4.0-SNAPSHOT</revision>
+        <maven>3.8.3</maven>
+
         <project-shortname>epsilon-runtime-eclipse</project-shortname>
         <project-repositoryId>BlackBeltTechnology/epsilon-runtime-eclipse</project-repositoryId>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -52,8 +55,8 @@
 
 		<epsilon-runtime-version>1.4.0.20210919_103207_8f2ef01_develop</epsilon-runtime-version>
 
-		<maven.compiler.source>1.8</maven.compiler.source>
-		<maven.compiler.target>1.8</maven.compiler.target>
+		<maven.compiler.source>11</maven.compiler.source>
+		<maven.compiler.target>11</maven.compiler.target>
 		<tycho-version>2.4.0</tycho-version>
 		<eclipse-p2-base>https://download.eclipse.org/releases/2020-06</eclipse-p2-base>
 	</properties>
@@ -108,6 +111,32 @@
 				<groupId>org.eclipse.tycho</groupId>
 				<artifactId>tycho-versions-plugin</artifactId>
 			</plugin>
+
+			<plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>flatten-maven-plugin</artifactId>
+                <version>1.1.0</version>
+                <configuration>
+                    <updatePomFile>true</updatePomFile>
+                    <flattenMode>resolveCiFriendliesOnly</flattenMode>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>flatten</id>
+                        <phase>process-resources</phase>
+                        <goals>
+                            <goal>flatten</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>flatten.clean</id>
+                        <phase>clean</phase>
+                        <goals>
+                            <goal>clean</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
 		</plugins>
 
 		<pluginManagement>
@@ -344,7 +373,7 @@
             <id>modules</id>
             <activation>
                 <property>
-                    <name>github_release</name>
+                    <name>skipModules</name>
                     <value>!true</value>
                 </property>
             </activation>
@@ -406,11 +435,13 @@
 			<distributionManagement>
 				<snapshotRepository>
 					<id>judong-nexus-distribution</id>
-					<url>${env.JUDONG_MAVEN_UPSTREAM_SNAPSHOT}</url>
+					<!--suppress UnresolvedMavenProperty -->
+					<url>https://nexus.judo.technology/repository/maven-judong-snapshots/</url>
 				</snapshotRepository>
 				<repository>
 					<id>judong-nexus-distribution</id>
-					<url>${env.JUDONG_MAVEN_UPSTREAM_RELEASE}</url>
+					<!--suppress UnresolvedMavenProperty -->
+					<url>https://nexus.judo.technology/repository/maven-judong-snapshots/</url>
 				</repository>
 			</distributionManagement>
 		</profile>
@@ -457,37 +488,26 @@
 		</profile>
 
         <profile>
-            <id>generate-github-release-body</id>
-            <activation>
-                <property>
-                    <name>github_release</name>
-                    <value>true</value>
-                </property>
-            </activation>
+            <id>release-p2-judong</id>
             <build>
                 <plugins>
                     <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-resources-plugin</artifactId>
-                        <version>3.2.0</version>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>wagon-maven-plugin</artifactId>
+						<version>2.0.0</version>
                         <executions>
                             <execution>
-                                <id>template-github-release-body</id>
-                                <phase>process-resources</phase>
+                                <id>upload-repository</id>
+                                <phase>deploy</phase>
                                 <goals>
-                                    <goal>copy-resources</goal>
+                                    <goal>upload</goal>
                                 </goals>
                                 <configuration>
-                                    <outputDirectory>${basedir}/.release</outputDirectory>
-                                    <resources>
-                                        <resource>
-                                            <directory>${project.basedir}</directory>
-                                            <filtering>true</filtering>
-                                            <includes>
-                                                <include>.releasetemplate</include>
-                                            </includes>
-                                        </resource>
-                                    </resources>
+                                    <serverId>judong-nexus-distribution</serverId>
+                                    <fromDir>${basedir}/site/target/repository</fromDir>
+                                    <includes>*/**</includes>
+                                    <url>dav:https://nexus.judo.technology/repository/p2-judong/</url>
+                                    <toDir>${project-shortname}/${project.version}</toDir>
                                 </configuration>
                             </execution>
                         </executions>
@@ -495,34 +515,5 @@
                 </plugins>
             </build>
         </profile>
-
-		<profile>
-			<id>release-p2-judong</id>
-			<build>
-				<plugins>
-					<plugin>
-						<groupId>org.codehaus.mojo</groupId>
-						<artifactId>wagon-maven-plugin</artifactId>
-						<version>2.0.2</version>
-						<executions>
-							<execution>
-								<id>upload-respoitory</id>
-								<phase>deploy</phase>
-								<goals>
-									<goal>upload</goal>
-								</goals>
-								<configuration>
-									<serverId>judong-nexus-distribution</serverId>
-									<fromDir>${basedir}/site/target/repository</fromDir>
-									<includes>*/**</includes>
-									<url>dav:${env.JUDONG_P2_UPSTREAM}</url>
-									<toDir>${project-shortname}/${project.version}</toDir>
-								</configuration>
-							</execution>
-						</executions>
-					</plugin>
-				</plugins>
-			</build>
-		</profile>
     </profiles>
 </project>
