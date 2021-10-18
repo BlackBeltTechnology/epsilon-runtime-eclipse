@@ -5,9 +5,9 @@ Bundle-SymbolicName: hu.blackbelt.epsilon.runtime.execution;singleton:=true
 Automatic-Module-Name: hu.blackbelt.epsilon.runtime.execution
 Bundle-Version: 1.4.0.qualifier
 Bundle-ClassPath: .
-Bundle-Vendor: %providerName
+Bundle-Vendor: BlackBelt Technology
 Bundle-Localization: plugin
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-RequiredExecutionEnvironment: JavaSE-11
 Bundle-ActivationPolicy: lazy
 Bundle-ClassPath: 
  target/dependency/epsilon-runtime-execution.jar,

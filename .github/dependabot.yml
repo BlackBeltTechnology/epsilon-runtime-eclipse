@@ -6,22 +6,3 @@ updates:
     interval: daily
     time: "04:00"
   open-pull-requests-limit: 10
-  ignore:
-  - dependency-name: org.jboss.tools.tycho-plugins:repository-utils
-    versions:
-    - 2.2.0
-  - dependency-name: org.eclipse.tycho:tycho-surefire-plugin
-    versions:
-    - 2.2.0
-  - dependency-name: org.eclipse.tycho:tycho-versions-plugin
-    versions:
-    - 2.2.0
-  - dependency-name: org.eclipse.tycho:target-platform-configuration
-    versions:
-    - 2.2.0
-  - dependency-name: org.eclipse.tycho:tycho-maven-plugin
-    versions:
-    - 2.2.0
-  - dependency-name: de.jutzig:github-release-plugin
-    versions:
-    - 1.4.0
