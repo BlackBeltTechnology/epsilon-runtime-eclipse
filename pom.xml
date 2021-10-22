@@ -19,6 +19,7 @@
 
 	<scm>
 		<connection>scm:git:git@github.com:${project-repositoryId}.git</connection>
+		<!--suppress UnresolvedMavenProperty -->
 		<developerConnection>scm:git:ssh://${git.username}@github.com:${project-repositoryId}.git
         </developerConnection>
 		<url>http://github.com/${project-repositoryId}</url>
@@ -53,7 +54,7 @@
 		<timestamp>${maven.build.timestamp}</timestamp>
 		<maven.build.timestamp.format>yyyyMMddHHmmss</maven.build.timestamp.format>
 
-		<epsilon-runtime-version>1.4.0.20210919_103207_8f2ef01_develop</epsilon-runtime-version>
+		<epsilon-runtime-version>1.4.0.20211022_072214_ed58056d_develop</epsilon-runtime-version>
 
 		<maven.compiler.source>11</maven.compiler.source>
 		<maven.compiler.target>11</maven.compiler.target>
