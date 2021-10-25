@@ -54,7 +54,7 @@
 		<timestamp>${maven.build.timestamp}</timestamp>
 		<maven.build.timestamp.format>yyyyMMddHHmmss</maven.build.timestamp.format>
 
-		<epsilon-runtime-version>1.4.0.20211022_072214_ed58056d_develop</epsilon-runtime-version>
+		<epsilon-runtime-version>1.4.0.20211025_232707_08e4b846_feature_JNG_3110_DisposeCausedSideffect</epsilon-runtime-version>
 
 		<maven.compiler.source>11</maven.compiler.source>
 		<maven.compiler.target>11</maven.compiler.target>
