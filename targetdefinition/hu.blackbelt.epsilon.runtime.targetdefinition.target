@@ -90,42 +90,42 @@
 	</location>
 	<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
 		<repository location="https://download.eclipse.org/acceleo/updates/releases/3.7/"/>
-		<unit id="org.eclipse.acceleo.ui.interpreter.feature.group" version="3.7.10.202002210922"/>
+		<unit id="org.eclipse.acceleo.ui.interpreter.feature.group" version="3.7.11.202102190929"/>
 	</location>
 
 	  <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
 		  <repository location="http://download.eclipse.org/epsilon/interim/"/>
-		  <unit id="org.eclipse.epsilon.core.dt.feature.feature.group" version="2.4.0.202201182002"/>
-		  <unit id="org.eclipse.epsilon.core.feature.feature.group" version="2.4.0.202201182002"/>
-		  <unit id="org.eclipse.epsilon.emc.csv.dt.feature.feature.group" version="2.4.0.202201182002"/>
-		  <unit id="org.eclipse.epsilon.emc.csv.feature.feature.group" version="2.4.0.202201182002"/>
-		  <unit id="org.eclipse.epsilon.emc.graphml.feature.feature.group" version="2.4.0.202201182002"/>
-		  <unit id="org.eclipse.epsilon.emc.spreadsheets.excel.dt.feature.feature.group" version="2.4.0.202201182002"/>
-		  <unit id="org.eclipse.epsilon.emc.spreadsheets.excel.feature.feature.group" version="2.4.0.202201182002"/>
-		  <unit id="org.eclipse.epsilon.emc.spreadsheets.feature.feature.group" version="2.4.0.202201182002"/>
-		  <unit id="org.eclipse.epsilon.emc.spreadsheets.google.dt.feature.feature.group" version="2.4.0.202201182002"/>
-		  <unit id="org.eclipse.epsilon.emc.spreadsheets.google.feature.feature.group" version="2.4.0.202201182002"/>
-		  <unit id="org.eclipse.epsilon.emf.dt.feature.feature.group" version="2.4.0.202201182002"/>
-		  <unit id="org.eclipse.epsilon.emf.feature.feature.group" version="2.4.0.202201182002"/>
-		  <unit id="org.eclipse.epsilon.eunit.dt.emf.feature.feature.group" version="2.4.0.202201182002"/>
-		  <unit id="org.eclipse.epsilon.evl.emf.validation.feature.feature.group" version="2.4.0.202201182002"/>
-		  <unit id="org.eclipse.epsilon.ewl.emf.feature.feature.group" version="2.4.0.202201182002"/>
-		  <unit id="org.eclipse.epsilon.ewl.gmf.feature.feature.group" version="2.4.0.202201182002"/>
-		  <unit id="org.eclipse.epsilon.flexmi.dt.feature.feature.group" version="2.4.0.202201182002"/>
-		  <unit id="org.eclipse.epsilon.flexmi.feature.feature.group" version="2.4.0.202201182002"/>
-		  <unit id="org.eclipse.epsilon.hutn.dt.feature.feature.group" version="2.4.0.202201182002"/>
-		  <unit id="org.eclipse.epsilon.hutn.feature.feature.group" version="2.4.0.202201182002"/>
-		  <unit id="org.eclipse.epsilon.picto.feature.feature.group" version="2.4.0.202201182002"/>
-		  <unit id="org.eclipse.epsilon.simulink.dt.feature.feature.group" version="2.4.0.202201182002"/>
-		  <unit id="org.eclipse.epsilon.simulink.feature.feature.group" version="2.4.0.202201182002"/>
-		  <unit id="org.eclipse.epsilon.uml.dt.feature.feature.group" version="2.4.0.202201182002"/>
-		  <unit id="org.eclipse.epsilon.uml.feature.feature.group" version="2.4.0.202201182002"/>
-		  <unit id="org.eclipse.epsilon.emc.html.dt.feature.feature.group" version="2.4.0.202201182002"/>
-		  <unit id="org.eclipse.epsilon.emc.html.feature.feature.group" version="2.4.0.202201182002"/>
-		  <unit id="org.eclipse.epsilon.emc.jdt.dt.feature.feature.group" version="2.4.0.202201182002"/>
-		  <unit id="org.eclipse.epsilon.emc.jdt.feature.feature.group" version="2.4.0.202201182002"/>
-		  <unit id="org.eclipse.epsilon.eugenia.feature.feature.group" version="2.4.0.202201182002"/>
-		  <unit id="org.eclipse.epsilon.sirius.widget.feature.feature.group" version="2.4.0.202201182002"/>
+		  <unit id="org.eclipse.epsilon.core.dt.feature.feature.group" version="2.4.0.202202201027"/>
+		  <unit id="org.eclipse.epsilon.core.feature.feature.group" version="2.4.0.202202201027"/>
+		  <unit id="org.eclipse.epsilon.emc.csv.dt.feature.feature.group" version="2.4.0.202202201027"/>
+		  <unit id="org.eclipse.epsilon.emc.csv.feature.feature.group" version="2.4.0.202202201027"/>
+		  <unit id="org.eclipse.epsilon.emc.graphml.feature.feature.group" version="2.4.0.202202201027"/>
+		  <unit id="org.eclipse.epsilon.emc.spreadsheets.excel.dt.feature.feature.group" version="2.4.0.202202201027"/>
+		  <unit id="org.eclipse.epsilon.emc.spreadsheets.excel.feature.feature.group" version="2.4.0.202202201027"/>
+		  <unit id="org.eclipse.epsilon.emc.spreadsheets.feature.feature.group" version="2.4.0.202202201027"/>
+		  <unit id="org.eclipse.epsilon.emc.spreadsheets.google.dt.feature.feature.group" version="2.4.0.202202201027"/>
+		  <unit id="org.eclipse.epsilon.emc.spreadsheets.google.feature.feature.group" version="2.4.0.202202201027"/>
+		  <unit id="org.eclipse.epsilon.emf.dt.feature.feature.group" version="2.4.0.202202201027"/>
+		  <unit id="org.eclipse.epsilon.emf.feature.feature.group" version="2.4.0.202202201027"/>
+		  <unit id="org.eclipse.epsilon.eunit.dt.emf.feature.feature.group" version="2.4.0.202202201027"/>
+		  <unit id="org.eclipse.epsilon.evl.emf.validation.feature.feature.group" version="2.4.0.202202201027"/>
+		  <unit id="org.eclipse.epsilon.ewl.emf.feature.feature.group" version="2.4.0.202202201027"/>
+		  <unit id="org.eclipse.epsilon.ewl.gmf.feature.feature.group" version="2.4.0.202202201027"/>
+		  <unit id="org.eclipse.epsilon.flexmi.dt.feature.feature.group" version="2.4.0.202202201027"/>
+		  <unit id="org.eclipse.epsilon.flexmi.feature.feature.group" version="2.4.0.202202201027"/>
+		  <unit id="org.eclipse.epsilon.hutn.dt.feature.feature.group" version="2.4.0.202202201027"/>
+		  <unit id="org.eclipse.epsilon.hutn.feature.feature.group" version="2.4.0.202202201027"/>
+		  <unit id="org.eclipse.epsilon.picto.feature.feature.group" version="2.4.0.202202201027"/>
+		  <unit id="org.eclipse.epsilon.simulink.dt.feature.feature.group" version="2.4.0.202202201027"/>
+		  <unit id="org.eclipse.epsilon.simulink.feature.feature.group" version="2.4.0.202202201027"/>
+		  <unit id="org.eclipse.epsilon.uml.dt.feature.feature.group" version="2.4.0.202202201027"/>
+		  <unit id="org.eclipse.epsilon.uml.feature.feature.group" version="2.4.0.202202201027"/>
+		  <unit id="org.eclipse.epsilon.emc.html.dt.feature.feature.group" version="2.4.0.202202201027"/>
+		  <unit id="org.eclipse.epsilon.emc.html.feature.feature.group" version="2.4.0.202202201027"/>
+		  <unit id="org.eclipse.epsilon.emc.jdt.dt.feature.feature.group" version="2.4.0.202202201027"/>
+		  <unit id="org.eclipse.epsilon.emc.jdt.feature.feature.group" version="2.4.0.202202201027"/>
+		  <unit id="org.eclipse.epsilon.eugenia.feature.feature.group" version="2.4.0.202202201027"/>
+		  <unit id="org.eclipse.epsilon.sirius.widget.feature.feature.group" version="2.4.0.202202201027"/>
 	  </location>
   </locations>
   <targetJRE path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-11"/>
