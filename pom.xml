@@ -54,11 +54,11 @@
 		<timestamp>${maven.build.timestamp}</timestamp>
 		<maven.build.timestamp.format>yyyyMMddHHmmss</maven.build.timestamp.format>
 
-		<epsilon-runtime-version>1.4.0.20220608_125416_42b1cd6e_develop</epsilon-runtime-version>
+		<epsilon-runtime-version>1.4.0.20220616_093846_72efef9e_develop</epsilon-runtime-version>
 
 		<maven.compiler.source>11</maven.compiler.source>
 		<maven.compiler.target>11</maven.compiler.target>
-		<tycho-version>2.6.0</tycho-version>
+		<tycho-version>2.7.3</tycho-version>
 		<eclipse-p2-base>https://download.eclipse.org/releases/2021-12</eclipse-p2-base>
 	</properties>
 
@@ -559,5 +559,7 @@
                 </plugins>
             </build>
         </profile>
+
+
     </profiles>
 </project>
