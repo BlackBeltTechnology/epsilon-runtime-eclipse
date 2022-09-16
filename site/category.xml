@@ -4,17 +4,202 @@
       To install these features, point Eclipse at this site.
    </description>
    <feature id="hu.blackbelt.epsilon.runtime.feature">
-      <category name="site"/>
+      <category name="epsilon-runtime"/>
    </feature>
-   <category-def name="site" label="Epsilon runtime Update Site">
+   <feature id="org.eclipse.epsilon.core.dt.feature">
+      <category name="epsilon"/>
+   </feature>
+   <feature id="org.eclipse.epsilon.core.feature">
+      <category name="epsilon"/>
+   </feature>
+   <feature id="org.eclipse.epsilon.emc.csv.dt.feature">
+      <category name="epsilon"/>
+   </feature>
+   <feature id="org.eclipse.epsilon.emc.csv.feature">
+      <category name="epsilon"/>
+   </feature>
+   <feature id="org.eclipse.epsilon.emc.graphml.feature">
+      <category name="epsilon"/>
+   </feature>
+   <feature id="org.eclipse.epsilon.emc.spreadsheets.excel.dt.feature">
+      <category name="epsilon"/>
+   </feature>
+   <feature id="org.eclipse.epsilon.emc.spreadsheets.excel.feature">
+      <category name="epsilon"/>
+   </feature>
+   <feature id="org.eclipse.epsilon.emc.spreadsheets.feature">
+      <category name="epsilon"/>
+   </feature>
+   <feature id="org.eclipse.epsilon.emc.spreadsheets.google.dt.feature">
+      <category name="epsilon"/>
+   </feature>
+   <feature id="org.eclipse.epsilon.emc.spreadsheets.google.feature">
+      <category name="epsilon"/>
+   </feature>
+   <feature id="org.eclipse.epsilon.emf.dt.feature">
+      <category name="epsilon"/>
+   </feature>
+   <feature id="org.eclipse.epsilon.emf.feature">
+      <category name="epsilon"/>
+   </feature>
+   <feature id="org.eclipse.epsilon.eunit.dt.emf.feature">
+      <category name="epsilon"/>
+   </feature>
+   <feature id="org.eclipse.epsilon.evl.emf.validation.feature">
+      <category name="epsilon"/>
+   </feature>
+   <feature id="org.eclipse.epsilon.ewl.emf.feature">
+      <category name="epsilon"/>
+   </feature>
+   <feature id="org.eclipse.epsilon.ewl.gmf.feature">
+      <category name="epsilon"/>
+   </feature>
+   <feature id="org.eclipse.epsilon.flexmi.dt.feature">
+      <category name="epsilon"/>
+   </feature>
+   <feature id="org.eclipse.epsilon.flexmi.feature">
+      <category name="epsilon"/>
+   </feature>
+   <feature id="org.eclipse.epsilon.hutn.dt.feature">
+      <category name="epsilon"/>
+   </feature>
+   <feature id="org.eclipse.epsilon.hutn.feature">
+      <category name="epsilon"/>
+   </feature>
+   <feature id="org.eclipse.epsilon.picto.feature">
+      <category name="epsilon"/>
+   </feature>
+   <feature id="org.eclipse.epsilon.simulink.dt.feature">
+      <category name="epsilon"/>
+   </feature>
+   <feature id="org.eclipse.epsilon.simulink.feature">
+      <category name="epsilon"/>
+   </feature>
+   <feature id="org.eclipse.epsilon.uml.dt.feature">
+      <category name="epsilon"/>
+   </feature>
+   <feature id="org.eclipse.epsilon.uml.feature">
+      <category name="epsilon"/>
+   </feature>
+   <bundle id="org.apache.commons.math3">
+      <category name="3rd-party"/>
+   </bundle>
+   <bundle id="org.apache.poi">
+      <category name="3rd-party"/>
+   </bundle>
+   <bundle id="org.apache.poi.ooxml">
+      <category name="3rd-party"/>
+   </bundle>
+   <bundle id="org.apache.poi.ooxml.schemas">
+      <category name="3rd-party"/>
+   </bundle>
+   <bundle id="org.apache.commons.collections4">
+      <category name="3rd-party"/>
+   </bundle>
+   <bundle id="org.apache.commons.csv">
+      <category name="3rd-party"/>
+   </bundle>
+   <bundle id="org.apache.xmlbeans">
+      <category name="3rd-party"/>
+   </bundle>
+   <bundle id="com.google.gdata">
+      <category name="3rd-party"/>
+   </bundle>
+   <bundle id="org.apache.commons.compress">
+      <category name="3rd-party"/>
+   </bundle>
+   <bundle id="org.apache.commons.codec">
+      <category name="3rd-party"/>
+   </bundle>
+   <bundle id="org.apache.commons.collections">
+      <category name="3rd-party"/>
+   </bundle>
+   <bundle id="org.apache.commons.io">
+      <category name="3rd-party"/>
+   </bundle>
+   <bundle id="org.apache.commons.lang">
+      <category name="3rd-party"/>
+   </bundle>
+   <bundle id="org.apache.commons.lang3">
+      <category name="3rd-party"/>
+   </bundle>
+   <bundle id="org.apache.commons.logging">
+      <category name="3rd-party"/>
+   </bundle>
+   <bundle id="com.github.virtuald.curvesapi">
+      <category name="3rd-party"/>
+   </bundle>
+   <bundle id="com.atlassian.commonmark">
+      <category name="3rd-party"/>
+   </bundle>
+   <bundle id="com.atlassian.commonmark-gfm-strikethrough">
+      <category name="3rd-party"/>
+   </bundle>
+   <bundle id="com.atlassian.commonmark-gfm-tables">
+      <category name="3rd-party"/>
+   </bundle>
+   <bundle id="com.atlassian.commonmark-heading-anchor">
+      <category name="3rd-party"/>
+   </bundle>
+   <bundle id="com.atlassian.commonmark-image-attributes">
+      <category name="3rd-party"/>
+   </bundle>
+   <bundle id="com.atlassian.commonmark-ins">
+      <category name="3rd-party"/>
+   </bundle>
+   <bundle id="com.atlassian.commonmark-task-list-items">
+      <category name="3rd-party"/>
+   </bundle>
+   <bundle id="com.atlassian.commonmark-yaml">
+      <category name="3rd-party"/>
+   </bundle>
+   <bundle id="net.bytebuddy.byte-buddy">
+      <category name="3rd-party"/>
+   </bundle>
+   <bundle id="net.bytebuddy.byte-buddy-agent">
+      <category name="3rd-party"/>
+   </bundle>
+   <bundle id="net.sourceforge.plantuml">
+      <category name="3rd-party"/>
+   </bundle>
+   <bundle id="org.antlr.runtime">
+      <category name="3rd-party"/>
+   </bundle>
+   <bundle id="org.apache.commons.cli">
+      <category name="3rd-party"/>
+   </bundle>
+   <bundle id="org.apache.santuario.xmlsec">
+      <category name="3rd-party"/>
+   </bundle>
+   <bundle id="org.apache.log4j">
+      <category name="3rd-party"/>
+   </bundle>
+   <bundle id="org.apache.logging.log4j">
+      <category name="3rd-party"/>
+   </bundle>
+   <bundle id="javax.xml.stream">
+      <category name="3rd-party"/>
+   </bundle>
+   <bundle id="org.jdom">
+      <category name="3rd-party"/>
+   </bundle>
+   <bundle id="org.mockito">
+      <category name="3rd-party"/>
+   </bundle>
+   <bundle id="org.objenesis">
+      <category name="3rd-party"/>
+   </bundle>
+   <bundle id="org.yaml.snakeyaml">
+      <category name="3rd-party"/>
+   </bundle>
+   <bundle id="org.jsoup">
+      <category name="3rd-party"/>
+   </bundle>
+   <category-def name="epsilon-runtime" label="Epsilon runtime Update Site">
       <description>
          Epsilon runtime Update Site: contains all features in this build.
       </description>
    </category-def>
-   
-   <!-- This is currently ignored by Tycho, see https://bugs.eclipse.org/bugs/show_bug.cgi?id=453708 -->
-   <!-- The tycho plugin 1.5.0 will fix it -->
-   <!--
-   <repository-reference location="https://download.eclipse.org/epsilon/updates/1.5/" enabled="true" />
-   -->
+   <category-def name="epsilon" label="epsilon"/>
+   <category-def name="3rd-party" label="3rd Party dependencies"/>
 </site>
