@@ -44,7 +44,7 @@
 	</licenses>
 
 	<properties>
-	    <revision>1.5.1-SNAPSHOT</revision>
+	    <revision>1.5.2-SNAPSHOT</revision>
         <maven>3.8.3</maven>
 
         <project-shortname>epsilon-runtime-eclipse</project-shortname>
