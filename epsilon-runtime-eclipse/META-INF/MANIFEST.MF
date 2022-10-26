@@ -3,7 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: Epsilon Runtime Eclipse plugin
 Bundle-SymbolicName: hu.blackbelt.epsilon.runtime.execution;singleton:=true
 Automatic-Module-Name: hu.blackbelt.epsilon.runtime.execution
-Bundle-Version: 1.5.1
+Bundle-Version: 1.5.3
 Bundle-ClassPath: .
 Bundle-Vendor: BlackBelt Technology
 Bundle-Localization: plugin
@@ -12,62 +12,17 @@ Bundle-ActivationPolicy: lazy
 Bundle-ClassPath: 
  target/dependency/epsilon-runtime-execution.jar,
  target/dependency/epsilon-runtime-utils.jar
-Export-Package: hu.blackbelt.epsilon.runtime.execution;version="1.4.0.qualifier";
-  uses:="org.eclipse.epsilon.eol.models,
-   org.eclipse.emf.common.util,
-   hu.blackbelt.epsilon.runtime.execution.api,
-   hu.blackbelt.epsilon.runtime.execution.contexts,
-   org.eclipse.emf.ecore.resource",
- hu.blackbelt.epsilon.runtime.execution.api;version="1.4.0.qualifier";uses:="org.eclipse.epsilon.eol.models,org.slf4j,org.eclipse.emf.ecore.resource",
- hu.blackbelt.epsilon.runtime.execution.contexts;version="1.4.0.qualifier";
-  uses:="org.eclipse.epsilon.eol.models,
-   org.eclipse.epsilon.egl,
-   org.eclipse.epsilon.evl,
-   org.eclipse.epsilon.etl,
-   org.eclipse.epsilon.hutn,
-   org.eclipse.epsilon.ecl,
-   org.eclipse.epsilon.eol,
-   org.eclipse.epsilon.eml",
- hu.blackbelt.epsilon.runtime.execution.exceptions;version="1.4.0.qualifier";uses:="org.eclipse.emf.ecore.resource",
- hu.blackbelt.epsilon.runtime.execution.impl;version="1.4.0.qualifier";
-  uses:="org.eclipse.emf.common.util,
-   org.slf4j,
-   hu.blackbelt.epsilon.runtime.execution.api,
-   org.eclipse.emf.ecore.resource.impl,
-   org.eclipse.emf.ecore.xmi.impl",
- hu.blackbelt.epsilon.runtime.execution.model;version="1.4.0.qualifier";uses:="org.eclipse.epsilon.emc.emf,org.eclipse.emf.ecore.util",
- hu.blackbelt.epsilon.runtime.execution.model.emf;version="1.4.0.qualifier";
-  uses:="org.eclipse.epsilon.eol.models,
-   org.eclipse.epsilon.emc.emf,
-   hu.blackbelt.epsilon.runtime.execution.api,
-   org.eclipse.emf.common.util,
-   org.eclipse.emf.ecore.resource,
-   org.eclipse.emf.ecore.xmi.impl",
- hu.blackbelt.epsilon.runtime.execution.model.excel;version="1.4.0.qualifier";
-  uses:="org.apache.poi.ss.usermodel,
-   org.eclipse.epsilon.eol.models,
-   org.eclipse.emf.common.util,
-   hu.blackbelt.epsilon.runtime.execution.api,
-   org.eclipse.epsilon.emc.spreadsheets,
-   org.eclipse.emf.ecore.resource,
-   org.eclipse.epsilon.common.util,
-   org.eclipse.epsilon.eol.execute.context,
-   org.eclipse.epsilon.common.module",
- hu.blackbelt.epsilon.runtime.execution.model.plainxml;version="1.4.0.qualifier";
-  uses:="org.eclipse.epsilon.eol.models,
-   hu.blackbelt.epsilon.runtime.execution.api,
-   org.eclipse.emf.common.util,
-   org.eclipse.emf.ecore.resource,
-   org.eclipse.epsilon.emc.plainxml",
- hu.blackbelt.epsilon.runtime.execution.model.xml;version="1.4.0.qualifier";
-  uses:="org.eclipse.epsilon.emc.emf.xml,
-   org.eclipse.epsilon.eol.models,
-   hu.blackbelt.epsilon.runtime.execution.api,
-   org.eclipse.emf.common.util,
-   org.eclipse.emf.ecore.resource,
-   org.eclipse.emf.ecore.xmi.impl,
-   hu.blackbelt.epsilon.runtime.execution.model.emf",
- hu.blackbelt.epsilon.runtime.utils;version="1.4.0.qualifier"
+Export-Package: hu.blackbelt.epsilon.runtime.execution,
+ hu.blackbelt.epsilon.runtime.execution.api,
+ hu.blackbelt.epsilon.runtime.execution.contexts,
+ hu.blackbelt.epsilon.runtime.execution.exceptions,
+ hu.blackbelt.epsilon.runtime.execution.impl,
+ hu.blackbelt.epsilon.runtime.execution.model,
+ hu.blackbelt.epsilon.runtime.execution.model.emf,
+ hu.blackbelt.epsilon.runtime.execution.model.excel,
+ hu.blackbelt.epsilon.runtime.execution.model.plainxml,
+ hu.blackbelt.epsilon.runtime.execution.model.xml,
+ hu.blackbelt.epsilon.runtime.utils
 Import-Package: com.google.common.base,
  com.google.common.collect,
  org.slf4j;version="[1.6.0,2.0.0)"
