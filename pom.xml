@@ -44,7 +44,7 @@
 	</licenses>
 
 	<properties>
-	    <revision>1.5.1</revision>
+	    <revision>1.5.3</revision>
         <maven>3.8.3</maven>
 
         <project-shortname>epsilon-runtime-eclipse</project-shortname>
@@ -199,6 +199,12 @@
 
 		<pluginManagement>
 			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-install-plugin</artifactId>
+					<version>3.0.1</version>
+				</plugin>
+
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-compiler-plugin</artifactId>
@@ -658,7 +664,7 @@
 										<toc>left</toc>
 										<icons>font</icons>
 										<sectanchors>true</sectanchors>
-										<idprefix/>
+										<idprefix />
 										<idseparator>-</idseparator>
 									</attributes>
 								</configuration>
