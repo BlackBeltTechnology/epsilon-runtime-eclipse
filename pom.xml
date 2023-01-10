@@ -75,6 +75,52 @@
 		<jacoco.version>0.8.8</jacoco.version>
 
 	</properties>
+	
+    <repositories>
+
+    	<repository>
+    		<id>eclipse-epsilon</id>
+    		<url>https://download.eclipse.org/epsilon/updates/2.4</url>
+    		<layout>p2</layout>
+    	</repository>
+
+    	<repository>
+    		<id>eclipse-license</id>
+    		<url>https://download.eclipse.org/cbi/updates/license</url>
+    		<layout>p2</layout>
+    	</repository>
+
+    	<repository>
+    		<id>eclipse-release</id>
+    		<url>https://download.eclipse.org/releases/2022-12</url>
+    		<layout>p2</layout>
+    	</repository>
+
+    	<repository>
+    		<id>eclipse-emfatic</id>
+    		<url>https://download.eclipse.org/emfatic/update</url>
+    		<layout>p2</layout>
+    	</repository>
+
+    	<repository>
+    		<id>eclipse-emf-compare</id>
+    		<url>https://download.eclipse.org/modeling/emf/compare/updates/releases/latest</url>
+    		<layout>p2</layout>
+    	</repository>
+
+    	<repository>
+    		<id>eclipse-gmf</id>
+    		<url>https://download.eclipse.org/modeling/gmp/gmf-tooling/updates/releases</url>
+    		<layout>p2</layout>
+    	</repository>
+
+    	<repository>
+    		<id>eclipse-orbit</id>
+    		<url>https://download.eclipse.org/tools/orbit/downloads/drops/R20221123021534/repository</url>
+    		<layout>p2</layout>
+    	</repository>
+
+    </repositories>
 
 	<build>
 		<plugins>
@@ -90,13 +136,6 @@
 				<artifactId>target-platform-configuration</artifactId>
 				<version>${tycho-version}</version>
 				<configuration>
-                    <target>
-                        <artifact>
-                            <groupId>hu.blackbelt.epsilon</groupId>
-                            <artifactId>hu.blackbelt.epsilon.runtime.targetdefinition</artifactId>
-                            <version>${project.version}</version>
-                        </artifact>
-                    </target>
                     <environments>
 						<environment>
 							<os>linux</os>
@@ -474,7 +513,6 @@
                 </property>
             </activation>
             <modules>
-                <module>targetdefinition</module>
                 <module>epsilon-runtime-eclipse</module>
                 <module>feature</module>
                 <module>site</module>
@@ -559,35 +597,6 @@
 				</repository>
 			</distributionManagement>
 		</profile>
-
-        <profile>
-            <id>release-p2-judong</id>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.codehaus.mojo</groupId>
-                        <artifactId>wagon-maven-plugin</artifactId>
-						<version>2.0.2</version>
-                        <executions>
-                            <execution>
-                                <id>upload-repository</id>
-                                <phase>deploy</phase>
-                                <goals>
-                                    <goal>upload</goal>
-                                </goals>
-                                <configuration>
-                                    <serverId>judong-nexus-distribution</serverId>
-                                    <fromDir>${basedir}/site/target/repository</fromDir>
-                                    <includes>*/**</includes>
-                                    <url>dav:https://nexus.judo.technology/repository/p2-judong/</url>
-                                    <toDir>${project-shortname}/${project.version}</toDir>
-                                </configuration>
-                            </execution>
-                        </executions>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
 
 		<profile>
 			<id>generate-github-asciidoc-diagrams</id>
