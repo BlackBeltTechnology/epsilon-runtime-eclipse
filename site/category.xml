@@ -177,6 +177,7 @@
    <bundle id="org.apache.logging.log4j">
       <category name="3rd-party"/>
    </bundle>
+   <!--
    <bundle id="javax.xml.stream">
       <category name="3rd-party"/>
    </bundle>
@@ -186,6 +187,7 @@
    <bundle id="org.mockito">
       <category name="3rd-party"/>
    </bundle>
+   -->
    <bundle id="org.objenesis">
       <category name="3rd-party"/>
    </bundle>
