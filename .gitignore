@@ -56,4 +56,5 @@ wercker.env
 /**/.wercker
 .release
 **/.flattened-pom.xml
+**/.tycho-consumer-pom.xml
 
