@@ -12,5 +12,11 @@
         <artifactId>wagon-webdav-jackrabbit</artifactId>
         <version>3.5.2</version>
     </extension>
+<extensions>
+    <extension>
+        <groupId>org.eclipse.tycho</groupId>
+        <artifactId>tycho-build</artifactId>
+        <version>${tycho-version}</version>
+    </extension>
 
 </extensions>
