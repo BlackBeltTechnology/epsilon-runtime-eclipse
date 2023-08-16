@@ -45,7 +45,7 @@
 
 	<properties>
 	    <revision>1.5.4-SNAPSHOT</revision>
-        <maven>3.8.3</maven>
+        <maven>3.9.4</maven>
 
         <project-shortname>epsilon-runtime-eclipse</project-shortname>
         <project-repositoryId>BlackBeltTechnology/epsilon-runtime-eclipse</project-repositoryId>
