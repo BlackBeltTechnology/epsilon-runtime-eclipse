@@ -7,7 +7,7 @@ Bundle-Version: 1.5.4.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: BlackBelt Technology
 Bundle-Localization: plugin
-Bundle-RequiredExecutionEnvironment: JavaSE-11
+Bundle-RequiredExecutionEnvironment: JavaSE-17
 Bundle-ActivationPolicy: lazy
 Bundle-ClassPath: 
  target/dependency/epsilon-runtime-execution.jar,
