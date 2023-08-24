@@ -25,7 +25,7 @@ Export-Package: hu.blackbelt.epsilon.runtime.execution,
  hu.blackbelt.epsilon.runtime.utils
 Import-Package: com.google.common.base,
  com.google.common.collect,
- org.slf4j;version="[1.6.0,2.0.0)"
+ org.slf4j;version="(1.6,3]"
 Require-Bundle: org.eclipse.epsilon.common,
  org.eclipse.epsilon.ecl.engine,
  org.eclipse.epsilon.egl.engine,
