@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+
+   <description>
+      To install these features, point Eclipse at this site.
+   </description>
+   <feature id="hu.blackbelt.epsilon.runtime.feature">
+      <category name="epsilon_runtime"/>
+   </feature>
+   <category-def name="epsilon_runtime" label="Epsilon Runtime">
+      <description>
+         Epsilon Runtime
+      </description>
+   </category-def>
+
+   <feature id="hu.blackbelt.epsilon.runtime.feature.source">
+      <category name="epsilon_runtime_source"/>
+   </feature>
+   <category-def name="epsilon_runtime_source" label="Epsilon Runtime Source">
+      <description>
+         Epsilon Runtime source code.
+      </description>
+   </category-def>   
+</site>
