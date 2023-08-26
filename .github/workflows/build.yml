@@ -103,20 +103,6 @@ jobs:
 ##########################
 # MAVEN BUILD START
 ##########################
-      # Prepare version number
-      - name: 🚧 Set project version
-        run: |-
-          ./mvnw -B -Dstyle.color=always \
-          -DnewVersion=${{ steps.version.outputs.version }} \
-          -DgenerateBackupPoms=false \
-          -Dtycho.mode=maven \
-          versions:set
-
-      - name: 🚧 Set tycho version
-        run: |-
-          ./mvnw -B -Dstyle.color=always \
-          -Dtycho.mode=maven  \
-          tycho-versions:update-eclipse-metadata
 
       # Phase 1 - Build and deploy to judong nexus
       - name: 🔥 Build with Maven (build, test)
@@ -126,30 +112,20 @@ jobs:
           -Psign-artifacts,release-judong \
           deploy
 
-      # Phase 2 - Build and deploy to maven central
-      - name: 🎁 Deploy with Maven (central)
-        if: ${{ always() && startsWith(github.head_ref, 'release') && job.status == 'success' }}
+      - name: Release P2
         run: |-
           ./mvnw -B -Dstyle.color=always \
           -Drevision=${{ steps.version.outputs.version }} \
+          -Dtycho.mode=maven \
+          -Prelease-dummy,release-p2-judong \
           -DdeployOnly \
-          -P"release-central,sign-artifacts,-verify-feature" \
-          -Dmaven.test.skip=true \
+          -DskipTests=true \
+          -DskipModules=true \
           deploy
-          
-      - name: 🔎 Sonar Metrics
-        if: steps.context.outputs.branch == 'develop'
-        continue-on-error: true
-        run: |-
-          ./mvnw -B -Dstyle.color=always \
-          -Dsonar.projectKey=emf-genmodel-generator \
-          -Dsonar.host.url=https://sonar.judo.technology \
-          -Dsonar.login=${{ secrets.JUDO_SONAR_TOKEN }} \
-          sonar:sonar
 
-##########################
-# MAVEN BUILD END
-##########################
+      ##########################
+      # MAVEN BUILD END
+      ##########################
 
       - name: 📌 Create version tag
         uses: actions/github-script@v6
