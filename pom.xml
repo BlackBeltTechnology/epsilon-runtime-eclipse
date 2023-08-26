@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
     <groupId>hu.blackbelt.epsilon</groupId>
-    <artifactId>hu.blackbelt.epsilon.runtime</artifactId>
+    <artifactId>hu.blackbelt.epsilon.runtime.site</artifactId>
 	<packaging>pom</packaging>
     <version>${revision}</version>
 
@@ -53,13 +53,13 @@
 		<timestamp>${maven.build.timestamp}</timestamp>
 		<maven.build.timestamp.format>yyyyMMddHHmmss</maven.build.timestamp.format>
 
-		<epsilon-runtime-version>1.5.1.20230817_040936_9d1bfb69_develop</epsilon-runtime-version>
+		<epsilon-version>2.4.0.202203041826</epsilon-version>
+		<epsilon-runtime-version>1.5.1.20230826_185131_a85b1c29_feature_JNG_5144_ReplaceLogger</epsilon-runtime-version>
 
 		<maven.compiler.source>17</maven.compiler.source>
 		<maven.compiler.target>17</maven.compiler.target>
 
 		<tycho-version>4.0.1</tycho-version>
-		<eclipse-p2-base>https://download.eclipse.org/releases/2021-12</eclipse-p2-base>
 
 		<!--suppress UnresolvedMavenProperty -->
 		<logback-test-config>${maven.multiModuleProjectDirectory}/logback-test.xml</logback-test-config>
@@ -96,31 +96,6 @@
     		<url>https://download.eclipse.org/releases/2022-12</url>
     		<layout>p2</layout>
     	</repository>
-
-    	<repository>
-    		<id>eclipse-emfatic</id>
-    		<url>https://download.eclipse.org/emfatic/update</url>
-    		<layout>p2</layout>
-    	</repository>
-
-    	<repository>
-    		<id>eclipse-emf-compare</id>
-    		<url>https://download.eclipse.org/modeling/emf/compare/updates/releases/latest</url>
-    		<layout>p2</layout>
-    	</repository>
-
-    	<repository>
-    		<id>eclipse-gmf</id>
-    		<url>https://download.eclipse.org/modeling/gmp/gmf-tooling/updates/releases</url>
-    		<layout>p2</layout>
-    	</repository>
-
-    	<repository>
-    		<id>eclipse-orbit</id>
-    		<url>https://download.eclipse.org/tools/orbit/downloads/drops/R20221123021534/repository</url>
-    		<layout>p2</layout>
-    	</repository>
-
     </repositories>
 
 	<dependencies>
@@ -131,127 +106,9 @@
 		</dependency>
 	</dependencies>
 
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.eclipse.tycho</groupId>
-				<artifactId>tycho-maven-plugin</artifactId>
-				<version>${tycho-version}</version>
-				<extensions>true</extensions>
-			</plugin>
-
-			<plugin>
-				<groupId>org.eclipse.tycho</groupId>
-				<artifactId>target-platform-configuration</artifactId>
-				<version>${tycho-version}</version>
-				<configuration>
-                    <environments>
-						<environment>
-							<os>linux</os>
-							<ws>gtk</ws>
-							<arch>x86_64</arch>
-						</environment>
-						<environment>
-							<os>linux</os>
-							<ws>gtk</ws>
-							<arch>aarch64</arch>
-						</environment>
-						<environment>
-							<os>win32</os>
-							<ws>win32</ws>
-							<arch>x86_64</arch>
-						</environment>
-						<environment>
-							<os>macosx</os>
-							<ws>cocoa</ws>
-							<arch>x86_64</arch>
-						</environment>
-						<environment>
-							<os>macosx</os>
-							<ws>cocoa</ws>
-							<arch>aarch64</arch>
-						</environment>
-					</environments>
-				</configuration>
-			</plugin>
-
-			<plugin>
-				<groupId>org.eclipse.tycho</groupId>
-				<artifactId>tycho-versions-plugin</artifactId>
-			</plugin>
-
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-source-plugin</artifactId>
-				<version>3.2.1</version>
-				<executions>
-					<execution>
-						<id>attach-sources</id>
-						<goals>
-							<goal>jar-no-fork</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-
-			<plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>flatten-maven-plugin</artifactId>
-                <version>1.3.0</version>
-                <configuration>
-                    <updatePomFile>true</updatePomFile>
-                    <flattenMode>resolveCiFriendliesOnly</flattenMode>
-					<pomElements>
-						<dependencies>flatten</dependencies>
-						<repositories>flatten</repositories>
-					</pomElements>
-                </configuration>
-                <executions>
-                    <execution>
-                        <id>flatten</id>
-                        <phase>process-resources</phase>
-                        <goals>
-                            <goal>flatten</goal>
-                        </goals>
-                    </execution>
-                    <execution>
-                        <id>flatten.clean</id>
-                        <phase>clean</phase>
-                        <goals>
-                            <goal>clean</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-
-			<plugin>
-				<groupId>org.jacoco</groupId>
-				<artifactId>jacoco-maven-plugin</artifactId>
-				<version>${jacoco.version}</version>
-				<configuration>
-					<propertyName>jacoco.agent</propertyName>
-				</configuration>
-				<executions>
-					<execution>
-						<id>jacoco-initialize</id>
-						<goals>
-							<goal>prepare-agent</goal>
-						</goals>
-					</execution>
-					<execution>
-						<id>jacoco-report</id>
-						<goals>
-							<goal>report</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-
-		</plugins>
-
+    <build>
 		<pluginManagement>
 			<plugins>
-
 				<plugin>
 					<groupId>org.jacoco</groupId>
 					<artifactId>jacoco-maven-plugin</artifactId>
@@ -351,283 +208,200 @@
 					</configuration>
 				</plugin>
 
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-install-plugin</artifactId>
-					<version>3.0.1</version>
-				</plugin>
-
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-compiler-plugin</artifactId>
-				</plugin>
-
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-deploy-plugin</artifactId>
-					<version>3.0.0</version>
-					<!-- https://stackoverflow.com/questions/36328154/maven-deploy-plugin-deployatend-not-working -->
-					<!-- <configuration> <deployAtEnd>true</deployAtEnd> </configuration> -->
-				</plugin>
-
-				<plugin>
-					<groupId>hu.blackbelt.epsilon</groupId>
-					<artifactId>epsilon-maven-plugin</artifactId>
-					<version>${epsilon.maven.plugin.version}</version>
-				</plugin>
-
-				<!--This plugin's configuration is used to store Eclipse m2e settings
-					only. It has no influence on the Maven build itself. -->
-				<plugin>
-					<groupId>org.eclipse.m2e</groupId>
-					<artifactId>lifecycle-mapping</artifactId>
-					<version>1.0.0</version>
-					<configuration>
-						<lifecycleMappingMetadata>
-							<pluginExecutions>
-								<pluginExecution>
-									<pluginExecutionFilter>
-										<groupId>
-											hu.blackbelt.epsilon
-										</groupId>
-										<artifactId>
-											epsilon-maven-plugin
-										</artifactId>
-										<versionRange>
-											[1.1.1,)
-										</versionRange>
-										<goals>
-											<goal>execute</goal>
-											<goal>
-												executeConfiguration
-											</goal>
-										</goals>
-									</pluginExecutionFilter>
-									<action>
-										<ignore />
-									</action>
-								</pluginExecution>
-								<pluginExecution>
-									<pluginExecutionFilter>
-										<groupId>
-											org.apache.maven.plugins
-										</groupId>
-										<artifactId>
-											maven-resources-plugin
-										</artifactId>
-										<versionRange>[2.4.3,)</versionRange>
-										<goals>
-											<goal>testResources</goal>
-											<goal>resources</goal>
-										</goals>
-									</pluginExecutionFilter>
-									<action>
-										<ignore />
-									</action>
-								</pluginExecution>
-								<pluginExecution>
-									<pluginExecutionFilter>
-										<groupId>
-											org.eclipse.tycho
-										</groupId>
-										<artifactId>
-											tycho-packaging-plugin
-										</artifactId>
-										<versionRange>
-											[1.3.0,)
-										</versionRange>
-										<goals>
-											<goal>validate-id</goal>
-											<goal>
-												validate-version
-											</goal>
-										</goals>
-									</pluginExecutionFilter>
-									<action>
-										<ignore />
-									</action>
-								</pluginExecution>
-								<pluginExecution>
-									<pluginExecutionFilter>
-										<groupId>
-											org.eclipse.tycho
-										</groupId>
-										<artifactId>
-											tycho-compiler-plugin
-										</artifactId>
-										<versionRange>
-											[1.3.0,)
-										</versionRange>
-										<goals>
-											<goal>compile</goal>
-										</goals>
-									</pluginExecutionFilter>
-									<action>
-										<ignore />
-									</action>
-								</pluginExecution>
-								<pluginExecution>
-									<pluginExecutionFilter>
-										<groupId>
-											org.eclipse.tycho.extras
-										</groupId>
-										<artifactId>
-											tycho-eclipserun-plugin
-										</artifactId>
-										<versionRange>
-											[1.3.0,)
-										</versionRange>
-										<goals>
-											<goal>eclipse-run</goal>
-										</goals>
-									</pluginExecutionFilter>
-									<action>
-										<ignore />
-									</action>
-								</pluginExecution>
-								<pluginExecution>
-									<pluginExecutionFilter>
-										<groupId>
-											org.fornax.toolsupport
-										</groupId>
-										<artifactId>
-											fornax-oaw-m2-plugin
-										</artifactId>
-										<versionRange>
-											[3.6.0,)
-										</versionRange>
-										<goals>
-											<goal>run-workflow</goal>
-										</goals>
-									</pluginExecutionFilter>
-									<action>
-										<ignore />
-									</action>
-								</pluginExecution>
-								<pluginExecution>
-									<pluginExecutionFilter>
-										<groupId>
-											org.codehaus.mojo
-										</groupId>
-										<artifactId>
-											exec-maven-plugin
-										</artifactId>
-										<versionRange>
-											[1.4.0,)
-										</versionRange>
-										<goals>
-											<goal>java</goal>
-										</goals>
-									</pluginExecutionFilter>
-									<action>
-										<ignore />
-									</action>
-								</pluginExecution>
-								<pluginExecution>
-									<pluginExecutionFilter>
-										<groupId>
-											org.apache.maven.plugins
-										</groupId>
-										<artifactId>
-											maven-dependency-plugin
-										</artifactId>
-										<versionRange>
-											[2.8,)
-										</versionRange>
-										<goals>
-											<goal>properties</goal>
-											<goal>
-												copy-dependencies
-											</goal>
-										</goals>
-									</pluginExecutionFilter>
-									<action>
-										<ignore />
-									</action>
-								</pluginExecution>
-								<pluginExecution>
-									<pluginExecutionFilter>
-										<groupId>
-											org.codehaus.mojo
-										</groupId>
-										<artifactId>
-											flatten-maven-plugin
-										</artifactId>
-										<versionRange>
-											[1.1.0,)
-										</versionRange>
-										<goals>
-											<goal>flatten</goal>
-										</goals>
-									</pluginExecutionFilter>
-									<action>
-										<ignore />
-									</action>
-								</pluginExecution>
-								<pluginExecution>
-									<pluginExecutionFilter>
-										<groupId>
-											org.eclipse.tycho
-										</groupId>
-										<artifactId>
-											target-platform-configuration
-										</artifactId>
-										<versionRange>
-											[2.6.0,)
-										</versionRange>
-										<goals>
-											<goal>target-platform</goal>
-										</goals>
-									</pluginExecutionFilter>
-									<action>
-										<ignore />
-									</action>
-								</pluginExecution>
-							</pluginExecutions>
-						</lifecycleMappingMetadata>
-					</configuration>
-				</plugin>
-				<plugin>
-					<groupId>org.eclipse.tycho</groupId>
-					<artifactId>tycho-versions-plugin</artifactId>
-					<version>${tycho-version}</version>
-				</plugin>
-				<plugin>
-					<groupId>org.eclipse.tycho</groupId>
-					<artifactId>tycho-surefire-plugin</artifactId>
-					<version>${tycho-version}</version>
-				</plugin>
-
-				<plugin>
-					<groupId>org.sonatype.plugins</groupId>
-					<artifactId>nexus-staging-maven-plugin</artifactId>
-					<version>1.6.13</version>
-				</plugin>
-
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-source-plugin</artifactId>
-					<version>3.2.1</version>
-				</plugin>
 			</plugins>
 		</pluginManagement>
-	</build>
-	<profiles>
-        <profile>
-            <id>modules</id>
-            <activation>
-                <property>
-                    <name>skipModules</name>
-                    <value>!true</value>
-                </property>
-            </activation>
-            <modules>
-                <module>epsilon-runtime-eclipse</module>
-                <module>feature</module>
-                <module>site</module>
-            </modules>
-        </profile>
+        <plugins>
+            <plugin>
+                <groupId>org.reficio</groupId>
+                <artifactId>p2-maven-plugin</artifactId>
+                <version>2.1.0</version>
+                <executions>
+                    <execution>
+                        <id>pack-repository</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>site</goal>
+                        </goals>
+                        
+                        <configuration>
+                            <categoryFileURL>${basedir}/category.xml</categoryFileURL>
+							<p2>
+								<artifact><id>org.eclipse.epsilon.common:${epsilon-version}</id></artifact>
+								<artifact><id>org.eclipse.epsilon.common.dt:${epsilon-version}</id></artifact>
+								<artifact><id>org.eclipse.epsilon.ecl.engine:${epsilon-version}</id></artifact>
+								<artifact><id>org.eclipse.epsilon.egl.engine:${epsilon-version}</id></artifact>
+								<artifact><id>org.eclipse.epsilon.emg.engine:${epsilon-version}</id></artifact>
+								<artifact><id>org.eclipse.epsilon.emc.composite:${epsilon-version}</id></artifact>
+								<artifact><id>org.eclipse.epsilon.emc.csv:${epsilon-version}</id></artifact>
+								<artifact><id>org.eclipse.epsilon.emc.emf:${epsilon-version}</id></artifact>
+								<artifact><id>org.eclipse.epsilon.emc.emf.decorator:${epsilon-version}</id></artifact>
+								<artifact><id>org.eclipse.epsilon.emc.plainxml:${epsilon-version}</id></artifact>
+								<artifact><id>org.eclipse.epsilon.emc.spreadsheets:${epsilon-version}</id></artifact>
+								<artifact><id>org.eclipse.epsilon.eol.engine:${epsilon-version}</id></artifact>
+								<artifact><id>org.eclipse.epsilon.eol.tools:${epsilon-version}</id></artifact>
+								<artifact><id>org.eclipse.epsilon.eol.dt:${epsilon-version}</id></artifact>
+								<artifact><id>org.eclipse.epsilon.etl.engine:${epsilon-version}</id></artifact>
+								<artifact><id>org.eclipse.epsilon.evl.emf.validation:${epsilon-version}</id></artifact>
+								<artifact><id>org.eclipse.epsilon.evl.engine:${epsilon-version}</id></artifact>
+								<artifact><id>org.eclipse.epsilon.hutn.engine:${epsilon-version}</id></artifact>
+								<artifact><id>org.eclipse.epsilon.hutn.model:${epsilon-version}</id></artifact>
+								<artifact><id>org.eclipse.epsilon.antlr.postprocessor:${epsilon-version}</id></artifact>
+								<artifact><id>org.eclipse.epsilon.antlr.postprocessor.model:${epsilon-version}</id></artifact>
+								<artifact><id>org.eclipse.epsilon.egl.traceability.fine:${epsilon-version}</id></artifact>
+								<artifact><id>org.eclipse.epsilon.emc.bibtex:${epsilon-version}</id></artifact>
+								<artifact><id>org.eclipse.epsilon.emc.emf.virtual:${epsilon-version}</id></artifact>
+								<artifact><id>org.eclipse.epsilon.emc.graphml:${epsilon-version}</id></artifact>
+								<artifact><id>org.eclipse.epsilon.emc.hutn:${epsilon-version}</id></artifact>
+								<artifact><id>org.eclipse.epsilon.emc.muddle:${epsilon-version}</id></artifact>
+								<artifact><id>org.eclipse.epsilon.emc.simulink:${epsilon-version}</id></artifact>
+								<artifact><id>org.eclipse.epsilon.emc.simulink.common:${epsilon-version}</id></artifact>
+								<artifact><id>org.eclipse.epsilon.emc.simulink.dictionary:${epsilon-version}</id></artifact>
+								<artifact><id>org.eclipse.epsilon.emc.simulink.requirement:${epsilon-version}</id></artifact>
+								<artifact><id>org.eclipse.epsilon.emc.spreadsheets.excel:${epsilon-version}</id></artifact>
+								<artifact><id>org.eclipse.epsilon.emc.spreadsheets.google:${epsilon-version}</id></artifact>
+								<artifact><id>org.eclipse.epsilon.emc.uml:${epsilon-version}</id></artifact>
+								<artifact><id>org.eclipse.epsilon.eml.engine:${epsilon-version}</id></artifact>
+								<artifact><id>org.eclipse.epsilon.epl.engine:${epsilon-version}</id></artifact>
+								<artifact><id>org.eclipse.epsilon.erl.engine:${epsilon-version}</id></artifact>
+								<artifact><id>org.eclipse.epsilon.eunit.engine:${epsilon-version}</id></artifact>
+								<artifact><id>org.eclipse.epsilon.ewl.emf:${epsilon-version}</id></artifact>
+								<artifact><id>org.eclipse.epsilon.ewl.engine:${epsilon-version}</id></artifact>
+								<artifact><id>org.eclipse.epsilon.flexmi:${epsilon-version}</id></artifact>
+								<artifact><id>org.eclipse.epsilon.flock.engine:${epsilon-version}</id></artifact>
+								<artifact><id>org.eclipse.epsilon.hutn.model.antlrAst:${epsilon-version}</id></artifact>
+								<artifact><id>org.eclipse.epsilon.hutn.model.config:${epsilon-version}</id></artifact>
+								<artifact><id>org.eclipse.epsilon.hutn.unparser:${epsilon-version}</id></artifact>
+								<artifact><id>org.eclipse.epsilon.hutn.xmi:${epsilon-version}</id></artifact>
+								<artifact><id>org.eclipse.epsilon.picto:${epsilon-version}</id></artifact>
+								<artifact><id>org.eclipse.epsilon.pinset.engine:${epsilon-version}</id></artifact>
+								<artifact><id>org.eclipse.epsilon.profiling:${epsilon-version}</id></artifact>
+								<artifact><id>org.eclipse.epsilon.workflow:${epsilon-version}</id></artifact>
+								<artifact><id>org.eclipse.epsilon.workflow.emf:${epsilon-version}</id></artifact>
+							</p2>
 
+                            <featureDefinitions>
+                                <feature>
+                                    <id>hu.blackbelt.epsilon.runtime.feature</id>
+                                    <version>${project.version}</version>
+                                    <label>Epsilon Runtime feature</label>
+                                    <providerName>${project.groupId}</providerName>
+                                    <description>${project.description}</description>
+                                    <copyright>A copyright</copyright>
+                                    <license>A licence</license>
+                                    <generateSourceFeature>true</generateSourceFeature>
+                                    <artifacts>
+
+										<artifact>
+											<id>hu.blackbelt.epsilon:epsilon-runtime-execution:${epsilon-runtime-version}</id>
+                                            <transitive>true</transitive>
+                                            <source>true</source>
+                                            <!--                                        
+											<override>true</override>
+											-->
+                                        </artifact>
+										<artifact>
+											<id>hu.blackbelt.epsilon:epsilon-runtime-utils:${epsilon-runtime-version}</id>
+											<transitive>true</transitive>
+											<source>true</source>
+                                            <!--                                        
+											<override>true</override>
+											-->
+										</artifact>
+                                    </artifacts>
+                                </feature>
+                            </featureDefinitions>
+                        </configuration>
+
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>2.5.3</version>
+                <configuration>
+                    <descriptors>
+                        <descriptor>src/assembly/assembly.xml</descriptor>
+                    </descriptors>
+                    <tarLongFileMode>posix</tarLongFileMode>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>compress</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+			<!--
+            <plugin>
+                <groupId>org.mortbay.jetty</groupId>
+                <artifactId>jetty-maven-plugin</artifactId>
+                <version>8.1.5.v20120716</version>
+                <configuration>
+                    <scanIntervalSeconds>10</scanIntervalSeconds>
+                    <webAppSourceDirectory>${basedir}/target/repository/</webAppSourceDirectory>
+                    <webApp>
+                        <contextPath>/site</contextPath>
+                    </webApp>
+                </configuration>
+            </plugin>
+            -->
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>flatten-maven-plugin</artifactId>
+				<version>1.1.0</version>
+				<configuration>
+					<updatePomFile>true</updatePomFile>
+					<flattenMode>resolveCiFriendliesOnly</flattenMode>
+				</configuration>
+				<executions>
+					<execution>
+						<id>flatten</id>
+						<phase>process-resources</phase>
+						<goals>
+							<goal>flatten</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>flatten.clean</id>
+						<phase>clean</phase>
+						<goals>
+							<goal>clean</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+				<version>${jacoco.version}</version>
+				<configuration>
+					<propertyName>jacoco.agent</propertyName>
+				</configuration>
+				<executions>
+					<execution>
+						<id>jacoco-initialize</id>
+						<goals>
+							<goal>prepare-agent</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>jacoco-report</id>
+						<goals>
+							<goal>report</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+        </plugins>
+    </build>
+
+    <profiles>
 		<profile>
 			<id>sign-artifacts</id>
 			<build>
@@ -648,16 +422,16 @@
 			</build>
 		</profile>
 
-        <profile>
+		<profile>
 			<id>release-dummy</id>
 			<distributionManagement>
 				<snapshotRepository>
 					<id>dummy-distribution</id>
-					<url>file:///tmp/${project.version}/maven-snapshot/</url>
+					<url>file:///tmp/${project.groupId}-${project.artifactId}-${project.version}/maven-snapshot/</url>
 				</snapshotRepository>
 				<repository>
 					<id>dummy-distribution</id>
-					<url>file:///tmp/${project.version}/maven-release/</url>
+					<url>file:///tmp/${project.groupId}-${project.artifactId}-${project.version}/maven-release/</url>
 				</repository>
 			</distributionManagement>
 		</profile>
@@ -679,7 +453,7 @@
 		</profile>
 
 		<profile>
-            <id>release-central</id>
+			<id>release-central</id>
 			<build>
 				<plugins>
 					<plugin>
@@ -708,11 +482,39 @@
 		</profile>
 
 		<profile>
+			<id>release-p2-judong</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.codehaus.mojo</groupId>
+						<artifactId>wagon-maven-plugin</artifactId>
+						<executions>
+							<execution>
+								<id>upload-repository</id>
+								<phase>deploy</phase>
+								<goals>
+									<goal>upload</goal>
+								</goals>
+								<configuration>
+									<serverId>judong-nexus-distribution</serverId>
+									<fromDir>${basedir}/target/repository</fromDir>
+									<includes>*/**</includes>
+									<url>dav:https://nexus.judo.technology/repository/p2-judong/</url>
+									<toDir>${project-shortname}/${project.version}</toDir>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+
+		<profile>
 			<id>generate-github-asciidoc-diagrams</id>
 
 			<properties>
 				<asciidoctor.maven.plugin.version>2.2.2</asciidoctor.maven.plugin.version>
-				<asciidoctorj.version>2.5.5</asciidoctorj.version>
+				<asciidoctorj.version>2.5.6</asciidoctorj.version>
 				<asciidoctorj.diagram.version>2.2.3</asciidoctorj.diagram.version>
 				<jruby.version>9.3.4.0</jruby.version>
 			</properties>
