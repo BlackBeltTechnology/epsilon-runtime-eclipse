@@ -45,6 +45,7 @@
 
 	<properties>
 	    <revision>1.5.4-SNAPSHOT</revision>
+        <qualifier>-SNAPSHOT</qualifier>
         <maven>3.9.4</maven>
 
         <project-shortname>epsilon-runtime-eclipse</project-shortname>
@@ -59,7 +60,7 @@
 		<maven.compiler.source>17</maven.compiler.source>
 		<maven.compiler.target>17</maven.compiler.target>
 
-		<tycho-version>4.0.1</tycho-version>
+		<tycho-version>4.0.2</tycho-version>
 
 		<!--suppress UnresolvedMavenProperty -->
 		<logback-test-config>${maven.multiModuleProjectDirectory}/logback-test.xml</logback-test-config>
@@ -102,7 +103,7 @@
 		<dependency>
 			<groupId>ch.qos.logback</groupId>
 			<artifactId>logback-classic</artifactId>
-			<version>1.2.11</version>
+			<version>1.4.11</version>
 		</dependency>
 	</dependencies>
 
