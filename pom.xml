@@ -55,7 +55,7 @@
 		<maven.build.timestamp.format>yyyyMMddHHmmss</maven.build.timestamp.format>
 
 		<epsilon-version>2.4.0.202203041826</epsilon-version>
-		<epsilon-runtime-version>1.5.1.20230905_073415_4e8adc20_develop</epsilon-runtime-version>
+		<epsilon-runtime-version>1.5.1.20230914_115155_8ab2f00c_develop</epsilon-runtime-version>
 
 		<maven.compiler.source>17</maven.compiler.source>
 		<maven.compiler.target>17</maven.compiler.target>
