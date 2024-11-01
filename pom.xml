@@ -54,13 +54,13 @@
 		<timestamp>${maven.build.timestamp}</timestamp>
 		<maven.build.timestamp.format>yyyyMMddHHmmss</maven.build.timestamp.format>
 
-		<epsilon-version>2.4.0.202203041826</epsilon-version>
+		<epsilon-version>2.5.0.202404150823</epsilon-version>
 		<epsilon-runtime-version>1.5.1.20240414_020123_4ed0f7e3_develop</epsilon-runtime-version>
 
 		<maven.compiler.source>17</maven.compiler.source>
 		<maven.compiler.target>17</maven.compiler.target>
 
-		<tycho-version>4.0.7</tycho-version>
+		<tycho-version>4.0.9</tycho-version>
 
 		<!--suppress UnresolvedMavenProperty -->
 		<logback-test-config>${maven.multiModuleProjectDirectory}/logback-test.xml</logback-test-config>
@@ -82,7 +82,7 @@
 
     	<repository>
     		<id>eclipse-epsilon</id>
-    		<url>https://download.eclipse.org/epsilon/updates/2.4</url>
+    		<url>https://download.eclipse.org/epsilon/updates/2.5</url>
     		<layout>p2</layout>
     	</repository>
 
@@ -94,7 +94,7 @@
 
     	<repository>
     		<id>eclipse-release</id>
-    		<url>https://download.eclipse.org/releases/2022-12</url>
+    		<url>https://download.eclipse.org/releases/2024-09</url>
     		<layout>p2</layout>
     	</repository>
     </repositories>
@@ -259,7 +259,6 @@
 								<artifact><id>org.eclipse.epsilon.emc.simulink.dictionary:${epsilon-version}</id></artifact>
 								<artifact><id>org.eclipse.epsilon.emc.simulink.requirement:${epsilon-version}</id></artifact>
 								<artifact><id>org.eclipse.epsilon.emc.spreadsheets.excel:${epsilon-version}</id></artifact>
-								<artifact><id>org.eclipse.epsilon.emc.spreadsheets.google:${epsilon-version}</id></artifact>
 								<artifact><id>org.eclipse.epsilon.emc.uml:${epsilon-version}</id></artifact>
 								<artifact><id>org.eclipse.epsilon.eml.engine:${epsilon-version}</id></artifact>
 								<artifact><id>org.eclipse.epsilon.epl.engine:${epsilon-version}</id></artifact>
@@ -294,7 +293,7 @@
 
 										<artifact>
 											<id>hu.blackbelt.epsilon:epsilon-runtime-execution:${epsilon-runtime-version}</id>
-                                            <transitive>true</transitive>
+                                            <transitive>false</transitive>
                                             <source>true</source>
                                             <!--                                        
 											<override>true</override>
@@ -302,7 +301,7 @@
                                         </artifact>
 										<artifact>
 											<id>hu.blackbelt.epsilon:epsilon-runtime-utils:${epsilon-runtime-version}</id>
-											<transitive>true</transitive>
+											<transitive>false</transitive>
 											<source>true</source>
                                             <!--                                        
 											<override>true</override>
