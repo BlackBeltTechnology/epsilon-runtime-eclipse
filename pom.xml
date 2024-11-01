@@ -54,7 +54,7 @@
 		<timestamp>${maven.build.timestamp}</timestamp>
 		<maven.build.timestamp.format>yyyyMMddHHmmss</maven.build.timestamp.format>
 
-		<epsilon-version>2.4.0.202203041826</epsilon-version>
+		<epsilon-version>2.5.0.202404150823</epsilon-version>
 		<epsilon-runtime-version>1.5.1.20240414_020123_4ed0f7e3_develop</epsilon-runtime-version>
 
 		<maven.compiler.source>17</maven.compiler.source>
@@ -82,7 +82,7 @@
 
     	<repository>
     		<id>eclipse-epsilon</id>
-    		<url>https://download.eclipse.org/epsilon/updates/2.4</url>
+    		<url>https://download.eclipse.org/epsilon/updates/2.5</url>
     		<layout>p2</layout>
     	</repository>
 
@@ -259,7 +259,6 @@
 								<artifact><id>org.eclipse.epsilon.emc.simulink.dictionary:${epsilon-version}</id></artifact>
 								<artifact><id>org.eclipse.epsilon.emc.simulink.requirement:${epsilon-version}</id></artifact>
 								<artifact><id>org.eclipse.epsilon.emc.spreadsheets.excel:${epsilon-version}</id></artifact>
-								<artifact><id>org.eclipse.epsilon.emc.spreadsheets.google:${epsilon-version}</id></artifact>
 								<artifact><id>org.eclipse.epsilon.emc.uml:${epsilon-version}</id></artifact>
 								<artifact><id>org.eclipse.epsilon.eml.engine:${epsilon-version}</id></artifact>
 								<artifact><id>org.eclipse.epsilon.epl.engine:${epsilon-version}</id></artifact>
