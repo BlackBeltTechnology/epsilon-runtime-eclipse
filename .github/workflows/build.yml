@@ -116,7 +116,7 @@ jobs:
       - name: 🎁 Release P2 - version (parallel upload)
         run: |-
           export BASE_URL=https://nexus.judo.technology/repository/p2-judong/epsilon-runtime-eclipse/${{ steps.version.outputs.version }}
-          export REPOSITORY_DIR=./site/target/repository
+          export REPOSITORY_DIR=./target/repository
           export USERNAME=${{ secrets.JUDONG_NEXUS_USERNAME }}
           export PASSWORD=${{ secrets.JUDONG_NEXUS_PASSWORD }}
           export NUM_OF_PROC=6
@@ -144,7 +144,7 @@ jobs:
                                              --output /dev/null \
                                              --user "$USERNAME:$PASSWORD" \
                                              $BASE_URL
-          export REPOSITORY_DIR=./site/target/repository
+          export REPOSITORY_DIR=./target/repository
           export USERNAME=${{ secrets.JUDONG_NEXUS_USERNAME }}
           export PASSWORD=${{ secrets.JUDONG_NEXUS_PASSWORD }}
           export NUM_OF_PROC=6
