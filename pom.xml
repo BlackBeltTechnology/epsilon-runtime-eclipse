@@ -293,7 +293,7 @@
 
 										<artifact>
 											<id>hu.blackbelt.epsilon:epsilon-runtime-execution:${epsilon-runtime-version}</id>
-                                            <transitive>true</transitive>
+                                            <transitive>false</transitive>
                                             <source>true</source>
                                             <!--                                        
 											<override>true</override>
@@ -301,7 +301,7 @@
                                         </artifact>
 										<artifact>
 											<id>hu.blackbelt.epsilon:epsilon-runtime-utils:${epsilon-runtime-version}</id>
-											<transitive>true</transitive>
+											<transitive>false</transitive>
 											<source>true</source>
                                             <!--                                        
 											<override>true</override>
