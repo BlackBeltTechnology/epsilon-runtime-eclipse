@@ -64,9 +64,10 @@
 
 		<!--suppress UnresolvedMavenProperty -->
 		<logback-test-config>${maven.multiModuleProjectDirectory}/logback-test.xml</logback-test-config>
+		<logback-version>1.5.12</logback-version>
 
-		<surefire-version>3.0.0-M7</surefire-version>
-		<pax-exam-version>4.13.4</pax-exam-version>
+		<surefire-version>3.5.1</surefire-version>
+		<pax-exam-version>4.13.5</pax-exam-version>
 
 		<!-- Code Quality-->
 		<sonar-maven-plugin-version>3.9.1.2184</sonar-maven-plugin-version>
@@ -74,7 +75,7 @@
 		<sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
 		<sonar.language>java</sonar.language>
 		<sonar.java.source>${java.version}</sonar.java.source>
-		<jacoco.version>0.8.8</jacoco.version>
+		<jacoco.version>0.8.12</jacoco.version>
 
 	</properties>
 	
@@ -103,7 +104,7 @@
 		<dependency>
 			<groupId>ch.qos.logback</groupId>
 			<artifactId>logback-classic</artifactId>
-			<version>1.4.11</version>
+			<version>${logback-version}</version>
 		</dependency>
 	</dependencies>
 
@@ -293,7 +294,7 @@
 
 										<artifact>
 											<id>hu.blackbelt.epsilon:epsilon-runtime-execution:${epsilon-runtime-version}</id>
-                                            <transitive>false</transitive>
+                                            <transitive>true</transitive>
                                             <source>true</source>
                                             <!--                                        
 											<override>true</override>
@@ -301,7 +302,7 @@
                                         </artifact>
 										<artifact>
 											<id>hu.blackbelt.epsilon:epsilon-runtime-utils:${epsilon-runtime-version}</id>
-											<transitive>false</transitive>
+											<transitive>true</transitive>
 											<source>true</source>
                                             <!--                                        
 											<override>true</override>
