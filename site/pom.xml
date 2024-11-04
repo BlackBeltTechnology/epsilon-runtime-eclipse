@@ -1,0 +1,808 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>hu.blackbelt.epsilon</groupId>
+		<artifactId>hu.blackbelt.epsilon.runtime.parent</artifactId>
+		<version>${revision}</version>
+	</parent>
+    <artifactId>hu.blackbelt.epsilon.runtime.site</artifactId>
+	<packaging>pom</packaging>
+    <version>${revision}</version>
+
+	<name>Epsilon :: Runtime :: Eclipse :: Site</name>
+
+	<description>Epsilon runtime site</description>
+
+    <build>
+		<plugins>
+            <plugin>
+                <groupId>org.reficio</groupId>
+                <artifactId>p2-maven-plugin</artifactId>
+                <version>2.1.0</version>
+                <executions>
+                    <execution>
+                        <id>pack-repository</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>site</goal>
+                        </goals>
+                        
+                        <configuration>
+                            <categoryFileURL>${basedir}/category.xml</categoryFileURL>
+                            <p2>
+								<artifact><id>com.googlecode.json-simple:1.1.1</id></artifact>
+								<artifact><id>org.eclipse.epsilon.antlr.postprocessor.model:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.antlr.postprocessor:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.common.dt.examples:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.common.dt:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.common:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.dt.epackageregistryexplorer:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.dt.exeed:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.ecl.dt:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.ecl.engine:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.ecore.delegates:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.egl.dt.traceability.editor:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.egl.dt.traceability.fine.emf:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.egl.dt:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.egl.engine:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.egl.traceability.fine:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.emc.bibtex.dt:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.emc.bibtex:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.emc.cdo.dt:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.emc.cdo:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.emc.composite:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.emc.csv.dt:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.emc.csv:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.emc.emf.decorator.dt:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.emc.emf.decorator:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.emc.emf.dt:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.emc.emf.virtual:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.emc.emf:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.emc.graphml.dt:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.emc.graphml:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.emc.html.dt:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.emc.html:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.emc.hutn.dt:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.emc.hutn:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.emc.jdt.dt:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.emc.jdt:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.emc.json.dt:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.emc.json:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.emc.muddle:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.emc.plainxml.dt:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.emc.plainxml:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.emc.simulink.common.dt:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.emc.simulink.common:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.emc.simulink.dictionary.dt:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.emc.simulink.dictionary:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.emc.simulink.dt:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.emc.simulink.requirement.dt:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.emc.simulink.requirement:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.emc.simulink:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.emc.spreadsheets.excel.dt:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.emc.spreadsheets.excel:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.emc.spreadsheets:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.emc.uml.dt:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.emc.uml:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.emc.yaml.dt:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.emc.yaml:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.emf.dt:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.emg.dt:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.emg.engine:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.eml.dt:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.eml.engine:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.eol.dt.interpreter:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.eol.dt:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.eol.engine:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.eol.tools:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.epl.dt:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.epl.engine:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.erl.dt:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.erl.engine:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.etl.dt:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.etl.engine:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.eunit.cmp.emf:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.eunit.dt.diff.emf:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.eunit.dt.diff.files:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.eunit.dt:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.eunit.engine:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.eunit.junit.dt:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.eunit.junit:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.evl.dt:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.evl.emf.validation:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.evl.engine:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.ewl.dt:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.ewl.emf:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.ewl.engine:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.ewl.gmf:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.flexmi.dt:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.flexmi:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.flock.dt.emf:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.flock.dt:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.flock.engine:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.help:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.hutn.dt:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.hutn.engine:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.hutn.model.antlrAst:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.hutn.model.config:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.hutn.model:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.hutn.unparser:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.hutn.xmi.dt:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.hutn.xmi:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.perspective:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.picto:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.pinset.dt:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.pinset.engine:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.profiling.dt:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.profiling:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.sirius.widget:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.workflow.csv:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.workflow.emf:2.5.0.202404150823</id></artifact>
+								<artifact><id>org.eclipse.epsilon.workflow:2.5.0.202404150823</id></artifact>
+								<artifact><id>wrapped.net.sourceforge.plantuml.plantuml-epl:1.2023.11</id></artifact>
+								<artifact><id>wrapped.org.apache.poi.poi-ooxml-schemas:4.1.2</id></artifact>
+								<artifact><id>wrapped.org.apache.poi.poi-ooxml:4.1.2</id></artifact>
+								<artifact><id>wrapped.org.apache.poi.poi:4.1.2</id></artifact>
+
+								<!--
+								<artifact><id>com.atlassian.commonmark:0.15.1.v20200707-1444</id></artifact>
+								<artifact><id>com.atlassian.commonmark-gfm-strikethrough:0.15.1.v20200707-1444</id></artifact>
+								<artifact><id>com.atlassian.commonmark-gfm-tables:0.15.1.v20200707-1444</id></artifact>
+								<artifact><id>com.atlassian.commonmark-heading-anchor:0.15.1.v20200707-1444</id></artifact>
+								<artifact><id>com.atlassian.commonmark-image-attributes:0.15.1.v20200707-1444</id></artifact>
+								<artifact><id>com.atlassian.commonmark-ins:0.15.1.v20200707-1444</id></artifact>
+								<artifact><id>com.atlassian.commonmark-task-list-items:0.15.1.v20200707-1444</id></artifact>
+								<artifact><id>com.atlassian.commonmark-yaml:0.15.1.v20200707-1444</id></artifact>
+								<artifact><id>com.google.gdata:1.47.1.v20200819-2030</id></artifact>
+								<artifact><id>net.bytebuddy.byte-buddy:1.7.9.v20180420-1519</id></artifact>
+								<artifact><id>net.bytebuddy.byte-buddy-agent:1.7.9.v20180420-1519</id></artifact>
+								<artifact><id>net.sourceforge.plantuml:1.2019.0.v20200820-1243</id></artifact>
+								<artifact><id>org.antlr.runtime:3.5.2.v20200724-1452</id></artifact>
+								<artifact><id>org.apache.commons.cli:1.4.0.v20200417-1444</id></artifact>
+								<artifact><id>org.apache.commons.codec:1.14.0.v20200818-1422</id></artifact>
+								<artifact><id>org.apache.commons.collections:3.2.2.v201511171945</id></artifact>
+								<artifact><id>org.apache.commons.collections4:4.4.0.v20200420-1700</id></artifact>
+								<artifact><id>org.apache.commons.compress:1.19.0.v20200106-2343</id></artifact>
+								<artifact><id>org.apache.commons.csv:1.8.0.v20200804-1438</id></artifact>
+								<artifact><id>org.apache.commons.lang3:3.1.0.v201403281430</id></artifact>
+								<artifact><id>org.apache.commons.logging:1.2.0.v20180409-1502</id></artifact>
+								<artifact><id>org.apache.commons.math3:3.6.1.v20200817-1830</id></artifact>
+								<artifact><id>org.apache.logging.log4j:2.8.2.v20200818-1118</id></artifact>
+								<artifact><id>org.apache.poi:4.1.1.v20200604-1524</id></artifact>
+								<artifact><id>org.apache.poi.ooxml:4.1.1.v20200820-1148</id></artifact>
+								<artifact><id>org.apache.poi.ooxml.schemas:4.1.1.v20200922-2105</id></artifact>
+								<artifact><id>org.apache.santuario.xmlsec:2.2.0.v20200818-1422</id></artifact>
+								<artifact><id>org.apache.xmlbeans:3.1.0.v20200922-1359</id></artifact>
+								<artifact><id>javax.xml.stream:1.0.1.v201004272200</id></artifact>
+								<artifact><id>org.jdom:1.1.1.v201101151400</id></artifact>
+								<artifact><id>org.mockito:2.23.0.v20200310-1642</id></artifact>
+								<artifact><id>org.objenesis:2.6.0.v20180420-1519</id></artifact>
+								<artifact><id>org.yaml.snakeyaml:0.0.0</id></artifact>
+								<artifact><id>org.jsoup:1.7.2.v201411291515</id></artifact>
+								<artifact><id>org.jsoup.source:1.7.2.v201411291515</id></artifact>
+								-->
+	                        </p2>
+							<artifacts>
+								<artifact>
+									<id>hu.blackbelt.epsilon:epsilon-runtime-execution:${epsilon-runtime-version}</id>
+									<transitive>true</transitive>
+									<source>true</source>
+								</artifact>
+								<artifact>
+									<id>hu.blackbelt.epsilon:epsilon-runtime-utils:${epsilon-runtime-version}</id>
+									<transitive>false</transitive>
+									<source>true</source>
+								</artifact>
+
+
+								<artifact><id>org.apache.commons:commons-csv:1.4</id><transitive>true</transitive></artifact>
+								<artifact>
+									<id>commons-codec:commons-codec:1.14</id>
+									<transitive>true</transitive>
+	                                <override>true</override>
+									<instructions>
+										<Bundle-SymbolicName>org.apache.commons.codec</Bundle-SymbolicName>
+									</instructions>
+								</artifact>
+
+								<artifact>
+									<id>com.atlassian.commonmark:commonmark:0.15.1</id>
+									<transitive>true</transitive>
+	                                <override>true</override>
+									<instructions>
+										<Bundle-SymbolicName>com.atlassian.commonmark</Bundle-SymbolicName>
+									</instructions>
+								</artifact>
+
+								<artifact>
+									<id>com.atlassian.commonmark:commonmark-ext-gfm-strikethrough:0.15.1</id>
+									<transitive>true</transitive>
+	                                <override>true</override>
+									<instructions>
+										<Bundle-SymbolicName>com.atlassian.commonmark-gfm-strikethrough</Bundle-SymbolicName>
+									</instructions>
+								</artifact>
+
+
+								<artifact>
+									<id>com.atlassian.commonmark:commonmark-ext-gfm-tables:0.15.1</id>
+									<transitive>true</transitive>
+	                                <override>true</override>
+									<instructions>
+										<Bundle-SymbolicName>com.atlassian.commonmark-gfm-tables</Bundle-SymbolicName>
+									</instructions>
+								</artifact>
+
+
+								<artifact>
+									<id>com.atlassian.commonmark:commonmark-ext-heading-anchor:0.15.1</id>
+									<transitive>true</transitive>
+	                                <override>true</override>
+									<instructions>
+										<Bundle-SymbolicName>com.atlassian.commonmark-heading-anchor</Bundle-SymbolicName>
+									</instructions>
+								</artifact>
+
+
+								<artifact>
+									<id>com.atlassian.commonmark:commonmark-ext-image-attributes:0.15.1</id>
+									<transitive>true</transitive>
+	                                <override>true</override>
+									<instructions>
+										<Bundle-SymbolicName>com.atlassian.commonmark-image-attributes</Bundle-SymbolicName>
+									</instructions>
+								</artifact>
+
+
+								<artifact>
+									<id>com.atlassian.commonmark:commonmark-ext-ins:0.15.1</id>
+									<transitive>true</transitive>
+	                                <override>true</override>
+									<instructions>
+										<Bundle-SymbolicName>com.atlassian.commonmark-ins</Bundle-SymbolicName>
+									</instructions>
+								</artifact>
+
+
+								<artifact>
+									<id>com.atlassian.commonmark:commonmark-ext-task-list-items:0.15.1</id>
+									<transitive>true</transitive>
+	                                <override>true</override>
+									<instructions>
+										<Bundle-SymbolicName>com.atlassian.commonmark-task-list-items</Bundle-SymbolicName>
+									</instructions>
+								</artifact>
+
+
+								<artifact>
+									<id>com.atlassian.commonmark:commonmark-ext-yaml-front-matter:0.15.1</id>
+									<transitive>true</transitive>
+	                                <override>true</override>
+									<instructions>
+										<Bundle-SymbolicName>com.atlassian.commonmark-yaml</Bundle-SymbolicName>
+									</instructions>
+								</artifact>
+
+
+								<artifact>
+									<id>com.google.gdata:core:1.47.1</id>
+									<transitive>true</transitive>
+	                                <override>true</override>
+									<instructions>
+										<Bundle-SymbolicName>com.google.gdata</Bundle-SymbolicName>
+									</instructions>
+								</artifact>
+
+								<!--
+								<artifact>
+									<id>net.bytebuddy.byte-buddy:1.7.9.v20180420-1519</id>
+									<transitive>true</transitive>
+	                                <override>true</override>
+									<instructions>
+										<Bundle-SymbolicName>net.bytebuddy.byte-buddy</Bundle-SymbolicName>
+									</instructions>
+								</artifact>
+
+
+								<artifact>
+									<id>net.bytebuddy.byte-buddy-agent:1.7.9.v20180420-1519</id>
+									<transitive>true</transitive>
+	                                <override>true</override>
+									<instructions>
+										<Bundle-SymbolicName>net.bytebuddy.byte-buddy-agent</Bundle-SymbolicName>
+									</instructions>
+								</artifact>
+
+
+								<artifact>
+									<id>net.sourceforge.plantuml:1.2019.0.v20200820-1243</id>
+									<transitive>true</transitive>
+	                                <override>true</override>
+									<instructions>
+										<Bundle-SymbolicName>net.sourceforge.plantuml</Bundle-SymbolicName>
+									</instructions>
+								</artifact>
+
+
+								<artifact>
+									<id>org.antlr.runtime:3.5.2.v20200724-1452</id>
+									<transitive>true</transitive>
+	                                <override>true</override>
+									<instructions>
+										<Bundle-SymbolicName>org.antlr.runtime</Bundle-SymbolicName>
+									</instructions>
+								</artifact>
+
+
+								<artifact>
+									<id>org.apache.commons.cli:1.4.0.v20200417-1444</id>
+									<transitive>true</transitive>
+	                                <override>true</override>
+									<instructions>
+										<Bundle-SymbolicName>org.apache.commons.cli</Bundle-SymbolicName>
+									</instructions>
+								</artifact>
+
+
+								<artifact>
+									<id>org.apache.commons.codec:1.14.0.v20200818-1422</id>
+									<transitive>true</transitive>
+	                                <override>true</override>
+									<instructions>
+										<Bundle-SymbolicName>org.apache.commons.codec</Bundle-SymbolicName>
+									</instructions>
+								</artifact>
+
+
+								<artifact>
+									<id>org.apache.commons.collections:3.2.2.v201511171945</id>
+									<transitive>true</transitive>
+	                                <override>true</override>
+									<instructions>
+										<Bundle-SymbolicName>org.apache.commons.collections</Bundle-SymbolicName>
+									</instructions>
+								</artifact>
+
+
+								<artifact>
+									<id>org.apache.commons.collections4:4.4.0.v20200420-1700</id>
+									<transitive>true</transitive>
+	                                <override>true</override>
+									<instructions>
+										<Bundle-SymbolicName>org.apache.commons.collections4</Bundle-SymbolicName>
+									</instructions>
+								</artifact>
+
+
+								<artifact>
+									<id>org.apache.commons.compress:1.19.0.v20200106-2343</id>
+									<transitive>true</transitive>
+	                                <override>true</override>
+									<instructions>
+										<Bundle-SymbolicName>org.apache.commons.compress</Bundle-SymbolicName>
+									</instructions>
+								</artifact>
+
+
+								<artifact>
+									<id>org.apache.commons.csv:1.8.0.v20200804-1438</id>
+									<transitive>true</transitive>
+	                                <override>true</override>
+									<instructions>
+										<Bundle-SymbolicName>org.apache.commons.csv</Bundle-SymbolicName>
+									</instructions>
+								</artifact>
+
+
+								<artifact>
+									<id>org.apache.commons.lang3:3.1.0.v201403281430</id>
+									<transitive>true</transitive>
+	                                <override>true</override>
+									<instructions>
+										<Bundle-SymbolicName>org.apache.commons.lang3</Bundle-SymbolicName>
+									</instructions>
+								</artifact>
+
+
+								<artifact>
+									<id>org.apache.commons.logging:1.2.0.v20180409-1502</id>
+									<transitive>true</transitive>
+	                                <override>true</override>
+									<instructions>
+										<Bundle-SymbolicName>org.apache.commons.logging</Bundle-SymbolicName>
+									</instructions>
+								</artifact>
+
+
+								<artifact>
+									<id>org.apache.commons.math3:3.6.1.v20200817-1830</id>
+									<transitive>true</transitive>
+	                                <override>true</override>
+									<instructions>
+										<Bundle-SymbolicName>org.apache.commons.math3</Bundle-SymbolicName>
+									</instructions>
+								</artifact>
+
+
+								<artifact>
+									<id>org.apache.logging.log4j:2.8.2.v20200818-1118</id>
+									<transitive>true</transitive>
+	                                <override>true</override>
+									<instructions>
+										<Bundle-SymbolicName>org.apache.logging.log4j</Bundle-SymbolicName>
+									</instructions>
+								</artifact>
+
+
+								<artifact>
+									<id>org.apache.poi:4.1.1.v20200604-1524</id>
+									<transitive>true</transitive>
+	                                <override>true</override>
+									<instructions>
+										<Bundle-SymbolicName>org.apache.poi</Bundle-SymbolicName>
+									</instructions>
+								</artifact>
+
+
+								<artifact>
+									<id>org.apache.poi.ooxml:4.1.1.v20200820-1148</id>
+									<transitive>true</transitive>
+	                                <override>true</override>
+									<instructions>
+										<Bundle-SymbolicName>org.apache.poi.ooxml</Bundle-SymbolicName>
+									</instructions>
+								</artifact>
+
+
+								<artifact>
+									<id>org.apache.poi.ooxml.schemas:4.1.1.v20200922-2105</id>
+									<transitive>true</transitive>
+	                                <override>true</override>
+									<instructions>
+										<Bundle-SymbolicName>org.apache.poi.ooxml.schemas</Bundle-SymbolicName>
+									</instructions>
+								</artifact>
+
+
+								<artifact>
+									<id>org.apache.santuario.xmlsec:2.2.0.v20200818-1422</id>
+									<transitive>true</transitive>
+	                                <override>true</override>
+									<instructions>
+										<Bundle-SymbolicName>org.apache.santuario.xmlsec</Bundle-SymbolicName>
+									</instructions>
+								</artifact>
+
+
+								<artifact>
+									<id>org.apache.xmlbeans:3.1.0.v20200922-1359</id>
+									<transitive>true</transitive>
+	                                <override>true</override>
+									<instructions>
+										<Bundle-SymbolicName>org.apache.xmlbeans</Bundle-SymbolicName>
+									</instructions>
+								</artifact>
+
+
+								<artifact>
+									<id>javax.xml.stream:1.0.1.v201004272200</id>
+									<transitive>true</transitive>
+	                                <override>true</override>
+									<instructions>
+										<Bundle-SymbolicName>javax.xml.stream</Bundle-SymbolicName>
+									</instructions>
+								</artifact>
+
+
+								<artifact>
+									<id>org.jdom:1.1.1.v201101151400</id>
+									<transitive>true</transitive>
+	                                <override>true</override>
+									<instructions>
+										<Bundle-SymbolicName>org.jdom</Bundle-SymbolicName>
+									</instructions>
+								</artifact>
+
+
+								<artifact>
+									<id>org.mockito:2.23.0.v20200310-1642</id>
+									<transitive>true</transitive>
+	                                <override>true</override>
+									<instructions>
+										<Bundle-SymbolicName>org.mockito</Bundle-SymbolicName>
+									</instructions>
+								</artifact>
+
+
+								<artifact>
+									<id>org.objenesis:2.6.0.v20180420-1519</id>
+									<transitive>true</transitive>
+	                                <override>true</override>
+									<instructions>
+										<Bundle-SymbolicName>org.objenesis</Bundle-SymbolicName>
+									</instructions>
+								</artifact>
+
+
+								<artifact>
+									<id>org.yaml.snakeyaml:0.0.0</id>
+									<transitive>true</transitive>
+	                                <override>true</override>
+									<instructions>
+										<Bundle-SymbolicName>org.yaml.snakeyaml</Bundle-SymbolicName>
+									</instructions>
+								</artifact>
+
+
+								<artifact>
+									<id>org.jsoup:1.7.2.v201411291515</id>
+									<transitive>true</transitive>
+	                                <override>true</override>
+									<instructions>
+										<Bundle-SymbolicName>org.jsoup</Bundle-SymbolicName>
+									</instructions>
+								</artifact>
+
+
+								<artifact>
+									<id>org.jsoup.source:1.7.2.v201411291515</id>
+									<transitive>true</transitive>
+	                                <override>true</override>
+									<instructions>
+										<Bundle-SymbolicName>org.jsoup.source</Bundle-SymbolicName>
+									</instructions>
+								</artifact>
+								-->
+
+							</artifacts>
+                            <features>
+								<artifact>
+									<id>hu.blackbelt.epsilon:epsilon-runtime.feature:${project.version}</id>
+									<source>true</source>
+									<transitive>false</transitive>
+								</artifact>
+
+                                <artifact>
+                                    <id>hu.blackbelt.epsilon:hu.blackbelt.epsilon.runtime.epsilon.core.feature:${project.version}</id>
+                                    <source>true</source>
+                                    <transitive>false</transitive>
+                                </artifact>
+
+                                <artifact>
+                                    <id>hu.blackbelt.epsilon:hu.blackbelt.epsilon.runtime.epsilon.core.dt.feature:${project.version}</id>
+                                    <source>true</source>
+                                    <transitive>false</transitive>
+                                </artifact>
+
+
+                                <artifact>
+                                    <id>hu.blackbelt.epsilon:hu.blackbelt.epsilon.runtime.epsilon.emc.csv.dt.feature:${project.version}</id>
+                                    <source>true</source>
+                                    <transitive>false</transitive>
+                                </artifact>
+
+                                <artifact>
+                                    <id>hu.blackbelt.epsilon:hu.blackbelt.epsilon.runtime.epsilon.emc.csv.feature:${project.version}</id>
+                                    <source>true</source>
+                                    <transitive>false</transitive>
+                                </artifact>
+
+                                <artifact>
+                                    <id>hu.blackbelt.epsilon:hu.blackbelt.epsilon.runtime.epsilon.emc.html.dt.feature:${project.version}</id>
+                                    <source>true</source>
+                                    <transitive>false</transitive>
+                                </artifact>
+
+                                <artifact>
+                                    <id>hu.blackbelt.epsilon:hu.blackbelt.epsilon.runtime.epsilon.emc.html.feature:${project.version}</id>
+                                    <source>true</source>
+                                    <transitive>false</transitive>
+                                </artifact>
+
+                                <artifact>
+                                    <id>hu.blackbelt.epsilon:hu.blackbelt.epsilon.runtime.epsilon.emc.jdt.dt.feature:${project.version}</id>
+                                    <source>true</source>
+                                    <transitive>false</transitive>
+                                </artifact>
+
+                                <artifact>
+                                    <id>hu.blackbelt.epsilon:hu.blackbelt.epsilon.runtime.epsilon.emc.jdt.feature:${project.version}</id>
+                                    <source>true</source>
+                                    <transitive>false</transitive>
+                                </artifact>
+
+                                <artifact>
+                                    <id>hu.blackbelt.epsilon:hu.blackbelt.epsilon.runtime.epsilon.emc.spreadsheets.excel.dt.feature:${project.version}</id>
+                                    <source>true</source>
+                                    <transitive>false</transitive>
+                                </artifact>
+
+                                <artifact>
+                                    <id>hu.blackbelt.epsilon:hu.blackbelt.epsilon.runtime.epsilon.emc.spreadsheets.excel.feature:${project.version}</id>
+                                    <source>true</source>
+                                    <transitive>false</transitive>
+                                </artifact>
+
+                                <artifact>
+                                    <id>hu.blackbelt.epsilon:hu.blackbelt.epsilon.runtime.epsilon.emc.spreadsheets.feature:${project.version}</id>
+                                    <source>true</source>
+                                    <transitive>false</transitive>
+                                </artifact>
+
+                                <artifact>
+                                    <id>hu.blackbelt.epsilon:hu.blackbelt.epsilon.runtime.epsilon.emf.dt.feature:${project.version}</id>
+                                    <source>true</source>
+                                    <transitive>false</transitive>
+                                </artifact>
+
+                                <artifact>
+                                    <id>hu.blackbelt.epsilon:hu.blackbelt.epsilon.runtime.epsilon.emf.feature:${project.version}</id>
+                                    <source>true</source>
+                                    <transitive>false</transitive>
+                                </artifact>
+
+                                <artifact>
+                                    <id>hu.blackbelt.epsilon:hu.blackbelt.epsilon.runtime.epsilon.eunit.dt.emf.feature:${project.version}</id>
+                                    <source>true</source>
+                                    <transitive>false</transitive>
+                                </artifact>
+
+                                <artifact>
+                                    <id>hu.blackbelt.epsilon:hu.blackbelt.epsilon.runtime.epsilon.evl.emf.validation.feature:${project.version}</id>
+                                    <source>true</source>
+                                    <transitive>false</transitive>
+                                </artifact>
+
+                                <artifact>
+                                    <id>hu.blackbelt.epsilon:hu.blackbelt.epsilon.runtime.epsilon.ewl.emf.feature:${project.version}</id>
+                                    <source>true</source>
+                                    <transitive>false</transitive>
+                                </artifact>
+
+                                <artifact>
+                                    <id>hu.blackbelt.epsilon:hu.blackbelt.epsilon.runtime.epsilon.ewl.gmf.feature:${project.version}</id>
+                                    <source>true</source>
+                                    <transitive>false</transitive>
+                                </artifact>
+
+                                <artifact>
+                                    <id>hu.blackbelt.epsilon:hu.blackbelt.epsilon.runtime.epsilon.flexmi.dt.feature:${project.version}</id>
+                                    <source>true</source>
+                                    <transitive>false</transitive>
+                                </artifact>
+
+                                <artifact>
+                                    <id>hu.blackbelt.epsilon:hu.blackbelt.epsilon.runtime.epsilon.flexmi.feature:${project.version}</id>
+                                    <source>true</source>
+                                    <transitive>false</transitive>
+                                </artifact>
+
+                                <artifact>
+                                    <id>hu.blackbelt.epsilon:hu.blackbelt.epsilon.runtime.epsilon.hutn.dt.feature:${project.version}</id>
+                                    <source>true</source>
+                                    <transitive>false</transitive>
+                                </artifact>
+
+                                <artifact>
+                                    <id>hu.blackbelt.epsilon:hu.blackbelt.epsilon.runtime.epsilon.hutn.feature:${project.version}</id>
+                                    <source>true</source>
+                                    <transitive>false</transitive>
+                                </artifact>
+
+                                <artifact>
+                                    <id>hu.blackbelt.epsilon:hu.blackbelt.epsilon.runtime.epsilon.picto.feature:${project.version}</id>
+                                    <source>true</source>
+                                    <transitive>false</transitive>
+                                </artifact>
+
+                                <artifact>
+                                    <id>hu.blackbelt.epsilon:hu.blackbelt.epsilon.runtime.epsilon.simulink.dt.feature:${project.version}</id>
+                                    <source>true</source>
+                                    <transitive>false</transitive>
+                                </artifact>
+
+                                <artifact>
+                                    <id>hu.blackbelt.epsilon:hu.blackbelt.epsilon.runtime.epsilon.simulink.feature:${project.version}</id>
+                                    <source>true</source>
+                                    <transitive>false</transitive>
+                                </artifact>
+
+                                <artifact>
+                                    <id>hu.blackbelt.epsilon:hu.blackbelt.epsilon.runtime.epsilon.sirius.widget.feature:${project.version}</id>
+                                    <source>true</source>
+                                    <transitive>false</transitive>
+                                </artifact>
+
+                                <artifact>
+                                    <id>hu.blackbelt.epsilon:hu.blackbelt.epsilon.runtime.epsilon.uml.dt.feature:${project.version}</id>
+                                    <source>true</source>
+                                    <transitive>false</transitive>
+                                </artifact>
+
+                                <artifact>
+                                    <id>hu.blackbelt.epsilon:hu.blackbelt.epsilon.runtime.epsilon.uml.feature:${project.version}</id>
+                                    <source>true</source>
+                                    <transitive>false</transitive>
+                                </artifact>
+
+                            </features>
+<!--
+                            <featureDefinitions>
+                                <feature>
+                                    <id>hu.blackbelt.epsilon.runtime.feature</id>
+                                    <version>${project.version}</version>
+                                    <label>Epsilon Runtime feature</label>
+                                    <providerName>BlackBelt</providerName>
+                                    <description>Epsilon runtime API</description>
+                                    <copyright>
+                                    <![CDATA[
+Copyright (c) 2024 BlackBelt.
+This program and the accompanying materials are made
+available under the terms of the Eclipse Public License 2.0
+which is available at https://www.eclipse.org/legal/epl-2.0
+								    ]]>
+        							</copyright>
+                                    <license>Eclipse Public License - v 2.0</license>
+                                    <generateSourceFeature>true</generateSourceFeature>
+                                    <artifacts>
+
+										<artifact>
+											<id>hu.blackbelt.epsilon:epsilon-runtime-execution:${epsilon-runtime-version}</id>
+                                            <transitive>true</transitive>
+                                            <source>true</source>
+                                        </artifact>
+										<artifact>
+											<id>hu.blackbelt.epsilon:epsilon-runtime-utils:${epsilon-runtime-version}</id>
+											<transitive>false</transitive>
+											<source>true</source>
+										</artifact>
+                                    </artifacts>
+                                </feature>
+                            </featureDefinitions>
+-->
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>2.5.3</version>
+                <configuration>
+                    <descriptors>
+                        <descriptor>src/assembly/assembly.xml</descriptor>
+                    </descriptors>
+                    <tarLongFileMode>posix</tarLongFileMode>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>compress</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+			<!--
+            <plugin>
+                <groupId>org.mortbay.jetty</groupId>
+                <artifactId>jetty-maven-plugin</artifactId>
+                <version>8.1.5.v20120716</version>
+                <configuration>
+                    <scanIntervalSeconds>10</scanIntervalSeconds>
+                    <webAppSourceDirectory>${basedir}/target/repository/</webAppSourceDirectory>
+                    <webApp>
+                        <contextPath>/site</contextPath>
+                    </webApp>
+                </configuration>
+            </plugin>
+            -->
+
+        </plugins>
+    </build>
+
+</project>

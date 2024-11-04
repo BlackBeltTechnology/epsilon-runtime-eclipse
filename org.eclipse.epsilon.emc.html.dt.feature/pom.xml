@@ -1,0 +1,13 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>hu.blackbelt.epsilon</groupId>
+		<artifactId>hu.blackbelt.epsilon.runtime.parent</artifactId>
+		<version>${revision}</version>
+	</parent>
+    <artifactId>hu.blackbelt.epsilon.runtime.epsilon.emc.html.dt.feature</artifactId>
+	<name>Epsilon :: Runtime :: Eclipse :: Epsilon HTML Model DT features</name>
+
+	<description>Epsilon HTML Model Development Tools features</description>
+</project>
