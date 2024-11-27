@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<feature id="hu.blackbelt.epsilon.runtime.feature" label="Epsilon Runtime feature" provider-name="BlackBelt"
+         version="1.5.4.qualifier">
+    <description>Epsilon runtime API</description>
+    <copyright>Copyright (c) 2024 BlackBelt.
+        This program and the accompanying materials are made
+        available under the terms of the Eclipse Public License 2.0
+        which is available at https://www.eclipse.org/legal/epl-2.0
+    </copyright>
+    <license>Eclipse Public License - v 2.0</license>
+
+    <requires>
+        <import plugin="org.eclipse.core.runtime"/>
+        <import plugin="org.eclipse.emf.ecore"/>
+        <import plugin="org.eclipse.emf.ecore.xmi"/>
+        <import plugin="org.eclipse.ui"/>
+        <import plugin="org.eclipse.ui.ide"/>
+        <import plugin="org.eclipse.epsilon.evl.emf.validation"/>
+        <import plugin="org.eclipse.epsilon.common"/>
+    </requires>
+    <plugin download-size="0" id="hu.blackbelt.epsilon.runtime-execution" install-size="0" unpack="false" version="0.0.0"/>
+
+    <!--
+    <plugin download-size="0" id="org.apache.commons.lang" install-size="0" unpack="false" version="3.0.0"/>
+    <plugin download-size="0" id="org.apache.commons.collections" install-size="0" unpack="false" version="3.2.2"/>
+    <plugin download-size="0" id="org.apache.poi" install-size="0" unpack="false" version="4.1.2"/>
+    <plugin download-size="0" id="org.apache.commons.commons-codec" install-size="0" unpack="false" version="1.13.0"/>
+    <plugin download-size="0" id="org.apache.commons.commons-collections4" install-size="0" unpack="false" version="4.4.0"/>
+    <plugin download-size="0" id="org.apache.commons.math3" install-size="0" unpack="false" version="3.6.1"/>
+    <plugin download-size="0" id="com.zaxxer.SparseBitSet" install-size="0" unpack="false" version="1.2.0"/>
+    <plugin download-size="0" id="org.apache.poi.ooxml" install-size="0" unpack="false" version="4.1.2"/>
+    <plugin download-size="0" id="org.apache.poi.ooxml-schemas" install-size="0" unpack="false" version="4.1.2"/>
+    <plugin download-size="0" id="org.apache.xmlbeans" install-size="0" unpack="false" version="3.1.0"/>
+    <plugin download-size="0" id="org.apache.commons.commons-compress" install-size="0" unpack="false" version="1.19.0"/>
+    <plugin download-size="0" id="com.github.virtuald.curvesapi" install-size="0" unpack="false" version="1.06.0"/>
+    <plugin download-size="0" id="ch.qos.logback.classic" install-size="0" unpack="false" version="1.5.12"/>
+    <plugin download-size="0" id="ch.qos.logback.core" install-size="0" unpack="false" version="1.5.12"/>
+    <plugin download-size="0" id="slf4j.api" install-size="0" unpack="false" version="2.0.15"/>
+    <plugin download-size="0" id="org.eclipse.epsilon.common" install-size="0" unpack="false" version="2.5.0"/>
+    <plugin download-size="0" id="org.antlr.runtime" install-size="0" unpack="false" version="3.5.2"/>
+    <plugin download-size="0" id="org.eclipse.epsilon.profiling" install-size="0" unpack="false" version="2.5.0"/>
+    <plugin download-size="0" id="org.eclipse.epsilon.emc.emf" install-size="0" unpack="false" version="2.5.0"/>
+    <plugin download-size="0" id="org.eclipse.emf.ecore" install-size="0" unpack="false" version="2.23.0.v20200630-0516"/>
+    <plugin download-size="0" id="org.eclipse.emf.common" install-size="0" unpack="false" version="2.31.0.v20240731-0952"/>
+    <plugin download-size="0" id="org.eclipse.emf.ecore.change" install-size="0" unpack="false" version="2.14.0.v20190528-0725"/>
+    <plugin download-size="0" id="org.eclipse.emf.ecore.xmi" install-size="0" unpack="false" version="2.16.0.v20190528-0725"/>
+    <plugin download-size="0" id="org.apache.commons.logging" install-size="0" unpack="false" version="1.2.0"/>
+    <plugin download-size="0" id="org.eclipse.equinox.preferences" install-size="0" unpack="false" version="3.10.1.v20220615-0632"/>
+    <plugin download-size="0" id="org.eclipse.equinox.common" install-size="0" unpack="false" version="3.19.100.v20240524-2011"/>
+    <plugin download-size="0" id="org.eclipse.osgi" install-size="0" unpack="false" version="3.20.0.v20240509-1421"/>
+    <plugin download-size="0" id="org.osgi.service.prefs" install-size="0" unpack="false" version="1.1.2.202109301733"/>
+    <plugin download-size="0" id="osgi.annotation" install-size="0" unpack="false" version="8.0.1.202109301733"/>
+    <plugin download-size="0" id="org.eclipse.epsilon.emc.spreadsheets" install-size="0" unpack="false" version="2.5.0"/>
+    <plugin download-size="0" id="org.eclipse.epsilon.emc.composite" install-size="0" unpack="false" version="2.5.0"/>
+    <plugin download-size="0" id="org.eclipse.epsilon.emc.plainxml" install-size="0" unpack="false" version="2.5.0"/>
+    <plugin download-size="0" id="org.eclipse.epsilon.emc.hutn" install-size="0" unpack="false" version="2.5.0"/>
+    <plugin download-size="0" id="org.eclipse.epsilon.eol.engine" install-size="0" unpack="false" version="2.5.0"/>
+    <plugin download-size="0" id="org.eclipse.epsilon.erl.engine" install-size="0" unpack="false" version="2.5.0"/>
+    <plugin download-size="0" id="org.eclipse.epsilon.etl.engine" install-size="0" unpack="false" version="2.5.0"/>
+    <plugin download-size="0" id="com.google.guava" install-size="0" unpack="false" version="27.1.0.jre"/>
+    <plugin download-size="0" id="com.google.guava.listenablefuture" install-size="0" unpack="false" version="9999.0.0.empty-to-avoid-conflict-with-guava"/>
+    <plugin download-size="0" id="org.eclipse.epsilon.evl.engine" install-size="0" unpack="false" version="2.5.0"/>
+    <plugin download-size="0" id="org.eclipse.epsilon.emg.engine" install-size="0" unpack="false" version="2.5.0"/>
+    <plugin download-size="0" id="org.eclipse.epsilon.epl.engine" install-size="0" unpack="false" version="2.5.0"/>
+    <plugin download-size="0" id="org.eclipse.epsilon.ecl.engine" install-size="0" unpack="false" version="2.5.0"/>
+    <plugin download-size="0" id="org.eclipse.epsilon.eml.engine" install-size="0" unpack="false" version="2.5.0"/>
+    <plugin download-size="0" id="org.eclipse.epsilon.pinset.engine" install-size="0" unpack="false" version="2.5.0"/>
+    <plugin download-size="0" id="org.eclipse.epsilon.hutn.model.config" install-size="0" unpack="false" version="2.5.0"/>
+    <plugin download-size="0" id="org.eclipse.epsilon.hutn.engine" install-size="0" unpack="false" version="2.5.0"/>
+    <plugin download-size="0" id="org.eclipse.epsilon.egl.engine" install-size="0" unpack="false" version="2.5.0"/>
+    <plugin download-size="0" id="org.eclipse.epsilon.hutn.model" install-size="0" unpack="false" version="2.5.0"/>
+    <plugin download-size="0" id="org.eclipse.epsilon.hutn.model.antlrAst" install-size="0" unpack="false" version="2.5.0"/>
+    <plugin download-size="0" id="org.eclipse.epsilon.hutn.xmi" install-size="0" unpack="false" version="2.5.0"/>
+    <plugin download-size="0" id="org.eclipse.epsilon.hutn.unparser" install-size="0" unpack="false" version="2.5.0"/>
+    <plugin download-size="0" id="org.eclipse.epsilon.antlr.postprocessor" install-size="0" unpack="false" version="2.5.0"/>
+    <plugin download-size="0" id="org.eclipse.epsilon.antlr.postprocessor.model" install-size="0" unpack="false" version="2.5.0"/>
+    <plugin download-size="0" id="hu.blackbelt.epsilon.runtime-utils" install-size="0" unpack="false" version="1.5.1.20241103224325"/>
+    -->
+</feature>
