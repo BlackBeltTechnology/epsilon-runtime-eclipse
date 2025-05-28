@@ -44,7 +44,7 @@
 	</licenses>
 
 	<properties>
-	    <revision>1.5.4-SNAPSHOT</revision>
+	    <revision>2.8.0-SNAPSHOT</revision>
         <qualifier>-SNAPSHOT</qualifier>
         <maven>3.9.4</maven>
 
@@ -54,10 +54,10 @@
 		<timestamp>${maven.build.timestamp}</timestamp>
 		<maven.build.timestamp.format>yyyyMMddHHmmss</maven.build.timestamp.format>
 
-		<epsilon-version>2.5.0.202404150823</epsilon-version>
+		<epsilon-version>2.8.0.202502191012</epsilon-version>
 		<!-- <epsilon-version>2.5.0</epsilon-version> -->
 
-		<epsilon-runtime-version>1.5.1.20250220_144839_7dae83fe_develop</epsilon-runtime-version>
+		<epsilon-runtime-version>2.8.0-SNAPSHOT</epsilon-runtime-version>
 
 		<maven.compiler.source>17</maven.compiler.source>
 		<maven.compiler.target>17</maven.compiler.target>
@@ -86,7 +86,7 @@
 
     	<repository>
     		<id>eclipse-epsilon</id>
-    		<url>https://download.eclipse.org/epsilon/updates/2.5</url>
+    		<url>https://download.eclipse.org/epsilon/updates/2.8</url>
     		<layout>p2</layout>
     	</repository>
 
