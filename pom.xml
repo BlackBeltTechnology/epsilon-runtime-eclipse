@@ -62,7 +62,7 @@
 		<maven.compiler.source>17</maven.compiler.source>
 		<maven.compiler.target>17</maven.compiler.target>
 
-		<tycho-version>4.0.9</tycho-version>
+		<tycho-version>4.0.13</tycho-version>
 
 		<!--suppress UnresolvedMavenProperty -->
 		<logback-test-config>${maven.multiModuleProjectDirectory}/logback-test.xml</logback-test-config>
