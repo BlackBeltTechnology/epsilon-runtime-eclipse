@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <feature id="hu.blackbelt.epsilon.runtime.feature" label="Epsilon Runtime feature" provider-name="BlackBelt"
-         version="1.5.4.qualifier">
+         version="2.8.0.qualifier">
     <description>Epsilon runtime API</description>
     <copyright>Copyright (c) 2024 BlackBelt.
         This program and the accompanying materials are made
