@@ -57,7 +57,7 @@
 		<epsilon-version>2.8.0.202502191012</epsilon-version>
 		<!-- <epsilon-version>2.5.0</epsilon-version> -->
 
-		<epsilon-runtime-version>2.8.0.20250619_042026_c4ec39b3_develop</epsilon-runtime-version>
+		<epsilon-runtime-version>2.8.0.20250621_041725_8edb9ba7_develop</epsilon-runtime-version>
 
 		<maven.compiler.source>21</maven.compiler.source>
 		<maven.compiler.target>21</maven.compiler.target>
