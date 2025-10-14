@@ -55,14 +55,14 @@ jobs:
           servers: >
             [
                 {
-                    "id": "judong-nexus-mirror",
-                    "username": "${{ secrets.JUDONG_NEXUS_USERNAME }}",
-                    "password": "${{ secrets.JUDONG_NEXUS_PASSWORD }}"
+                    "id": "judong",
+                    "username": "${{ secrets.JUDONG_REPOSITORY_USER }}",
+                    "password": "${{ secrets.JUDONG_REPOSITORY_PASSWORD }}"
                 },
                 {
-                    "id": "judong-nexus-distribution",
-                    "username": "${{ secrets.JUDONG_NEXUS_USERNAME }}",
-                    "password": "${{ secrets.JUDONG_NEXUS_PASSWORD }}"
+                    "id": "judong-distribution",
+                    "username": "${{ secrets.JUDONG_REPOSITORY_USER }}",
+                    "password": "${{ secrets.JUDONG_REPOSITORY_PASSWORD }}"
                 },
                 {
                     "id": "ossrh",
@@ -71,14 +71,6 @@ jobs:
                 }
             ]
 
-          mirrors: >
-            [
-                {
-                    "id": "judong-nexus-mirror",
-                    "mirrorOf": "*",
-                    "url": "https://nexus.judo.technology/repository/maven-judong/"
-                 }
-            ]
 
       - name: 🔢 Calculate version number
         id: version
@@ -115,10 +107,10 @@ jobs:
       # Phase 2 - Deploy to P2 - version
       - name: 🎁 Release P2 - version (parallel upload)
         run: |-
-          export BASE_URL=https://nexus.judo.technology/repository/p2-judong/epsilon-runtime-eclipse/${{ steps.version.outputs.version }}
+          export BASE_URL=https://repository.judo.technology/repository/p2-judong/epsilon-runtime-eclipse/${{ steps.version.outputs.version }}
           export REPOSITORY_DIR=./target/repository
-          export USERNAME=${{ secrets.JUDONG_NEXUS_USERNAME }}
-          export PASSWORD=${{ secrets.JUDONG_NEXUS_PASSWORD }}
+          export USERNAME=${{ secrets.JUDONG_REPOSITORY_USER }}
+          export PASSWORD=${{ secrets.JUDONG_REPOSITORY_PASSWORD }}
           export NUM_OF_PROC=6
           callUpload() {
             curl --write-out ' %{url_effective} Bytes: %{size_upload} Response code: %{http_code}\n' \
@@ -138,15 +130,15 @@ jobs:
           (startsWith(github.head_ref, 'develop') || github.ref == 'refs/heads/develop') &&
           job.status == 'success' }}
         run: |-
-          export BASE_URL=https://nexus.judo.technology/repository/p2-judong/epsilon-runtime-eclipse/develop
+          export BASE_URL=https://repository.judo.technology/repository/p2-judong/epsilon-runtime-eclipse/develop
           curl -X DELETE --insecure \
                                              --silent \
                                              --output /dev/null \
                                              --user "$USERNAME:$PASSWORD" \
                                              $BASE_URL
           export REPOSITORY_DIR=./target/repository
-          export USERNAME=${{ secrets.JUDONG_NEXUS_USERNAME }}
-          export PASSWORD=${{ secrets.JUDONG_NEXUS_PASSWORD }}
+          export USERNAME=${{ secrets.JUDONG_REPOSITORY_USER }}
+          export PASSWORD=${{ secrets.JUDONG_REPOSITORY_PASSWORD }}
           export NUM_OF_PROC=6
           callUpload() {
             curl --write-out ' %{url_effective} Bytes: %{size_upload} Response code: %{http_code}\n' \
