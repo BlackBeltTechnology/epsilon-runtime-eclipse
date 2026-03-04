@@ -1,0 +1,72 @@
+# Epsilon Runtime Eclipse
+
+> Packages the Eclipse Epsilon model transformation framework (v2.8) as installable Eclipse features and a P2 update site for Eclipse-based products.
+
+Key facts:
+- Java 21 (Zulu JDK), built with Maven 3.9.4 and Tycho 4.0.13
+- 30+ Eclipse feature modules packaging upstream Epsilon plugins plus a custom BlackBelt runtime feature
+- Produces a P2 update site aggregating 112+ artifacts (Epsilon engines, model connectors, third-party libraries)
+- Supports EOL, ETL, EVL, EGL, EGX, EML, ECL model transformation language dialects
+- Model connectors for EMF, UML, Simulink, CSV, GraphML, HTML, JDT, Spreadsheets/Excel
+- License: Eclipse Public License 2.0 (EPL-2.0)
+
+## Docs
+
+- [README.md](README.md): Project overview, Epsilon language reference, and module dependency diagram
+- [AGENTS.md](AGENTS.md): Full developer guide with build commands, module inventory, and coding conventions
+- [CONTRIBUTING.md](CONTRIBUTING.md): Development setup and contribution guidelines
+- [.github/CIFLOW.md](.github/CIFLOW.md): Branching strategy, version numbering, and CI/CD pipeline details
+
+## Modules — Custom Runtime
+
+- [epsilon-runtime.feature/src/main/resources/feature.xml](epsilon-runtime.feature/src/main/resources/feature.xml): Custom BlackBelt runtime feature wrapping the hu.blackbelt.epsilon.runtime-execution plugin
+
+## Modules — Epsilon Core
+
+- [org.eclipse.epsilon.core.feature/src/main/resources/feature.xml](org.eclipse.epsilon.core.feature/src/main/resources/feature.xml): Core Epsilon parsers and execution engines (EOL, ETL, EVL, EGL, EGX, EML, ECL)
+- [org.eclipse.epsilon.core.dt.feature/src/main/resources/feature.xml](org.eclipse.epsilon.core.dt.feature/src/main/resources/feature.xml): Eclipse IDE development tools for Epsilon languages
+
+## Modules — EMF Integration
+
+- [org.eclipse.epsilon.emf.feature/src/main/resources/feature.xml](org.eclipse.epsilon.emf.feature/src/main/resources/feature.xml): EMF-based model management
+- [org.eclipse.epsilon.emf.dt.feature/src/main/resources/feature.xml](org.eclipse.epsilon.emf.dt.feature/src/main/resources/feature.xml): EMF development tools for Eclipse
+- [org.eclipse.epsilon.evl.emf.validation.feature/src/main/resources/feature.xml](org.eclipse.epsilon.evl.emf.validation.feature/src/main/resources/feature.xml): EMF model validation using EVL
+- [org.eclipse.epsilon.ewl.emf.feature/src/main/resources/feature.xml](org.eclipse.epsilon.ewl.emf.feature/src/main/resources/feature.xml): EWL wizard integration with EMF
+- [org.eclipse.epsilon.ewl.gmf.feature/src/main/resources/feature.xml](org.eclipse.epsilon.ewl.gmf.feature/src/main/resources/feature.xml): GMF graphical editor integration
+- [org.eclipse.epsilon.eunit.dt.emf.feature/src/main/resources/feature.xml](org.eclipse.epsilon.eunit.dt.emf.feature/src/main/resources/feature.xml): EUnit testing tools for EMF models
+- [org.eclipse.epsilon.flexmi.feature/src/main/resources/feature.xml](org.eclipse.epsilon.flexmi.feature/src/main/resources/feature.xml): FlexMI flexible model import
+- [org.eclipse.epsilon.flexmi.dt.feature/src/main/resources/feature.xml](org.eclipse.epsilon.flexmi.dt.feature/src/main/resources/feature.xml): FlexMI development tools
+
+## Modules — Model Connectors
+
+- [org.eclipse.epsilon.emc.csv.feature/src/main/resources/feature.xml](org.eclipse.epsilon.emc.csv.feature/src/main/resources/feature.xml): CSV file model connector
+- [org.eclipse.epsilon.emc.csv.dt.feature/src/main/resources/feature.xml](org.eclipse.epsilon.emc.csv.dt.feature/src/main/resources/feature.xml): CSV development tools
+- [org.eclipse.epsilon.emc.graphml.feature/src/main/resources/feature.xml](org.eclipse.epsilon.emc.graphml.feature/src/main/resources/feature.xml): GraphML model connector
+- [org.eclipse.epsilon.emc.html.feature/src/main/resources/feature.xml](org.eclipse.epsilon.emc.html.feature/src/main/resources/feature.xml): HTML model connector
+- [org.eclipse.epsilon.emc.html.dt.feature/src/main/resources/feature.xml](org.eclipse.epsilon.emc.html.dt.feature/src/main/resources/feature.xml): HTML development tools
+- [org.eclipse.epsilon.emc.jdt.feature/src/main/resources/feature.xml](org.eclipse.epsilon.emc.jdt.feature/src/main/resources/feature.xml): Java source code model connector via JDT
+- [org.eclipse.epsilon.emc.jdt.dt.feature/src/main/resources/feature.xml](org.eclipse.epsilon.emc.jdt.dt.feature/src/main/resources/feature.xml): JDT development tools
+- [org.eclipse.epsilon.emc.spreadsheets.feature/src/main/resources/feature.xml](org.eclipse.epsilon.emc.spreadsheets.feature/src/main/resources/feature.xml): Generic spreadsheet model connector
+- [org.eclipse.epsilon.emc.spreadsheets.excel.feature/src/main/resources/feature.xml](org.eclipse.epsilon.emc.spreadsheets.excel.feature/src/main/resources/feature.xml): Excel-specific spreadsheet connector
+- [org.eclipse.epsilon.emc.spreadsheets.excel.dt.feature/src/main/resources/feature.xml](org.eclipse.epsilon.emc.spreadsheets.excel.dt.feature/src/main/resources/feature.xml): Excel development tools
+- [org.eclipse.epsilon.simulink.feature/src/main/resources/feature.xml](org.eclipse.epsilon.simulink.feature/src/main/resources/feature.xml): Simulink model connector
+- [org.eclipse.epsilon.simulink.dt.feature/src/main/resources/feature.xml](org.eclipse.epsilon.simulink.dt.feature/src/main/resources/feature.xml): Simulink development tools
+- [org.eclipse.epsilon.uml.feature/src/main/resources/feature.xml](org.eclipse.epsilon.uml.feature/src/main/resources/feature.xml): UML model connector
+- [org.eclipse.epsilon.uml.dt.feature/src/main/resources/feature.xml](org.eclipse.epsilon.uml.dt.feature/src/main/resources/feature.xml): UML development tools
+
+## Modules — Additional Features
+
+- [org.eclipse.epsilon.hutn.feature/src/main/resources/feature.xml](org.eclipse.epsilon.hutn.feature/src/main/resources/feature.xml): HUTN (Human Usable Textual Notation) parser
+- [org.eclipse.epsilon.hutn.dt.feature/src/main/resources/feature.xml](org.eclipse.epsilon.hutn.dt.feature/src/main/resources/feature.xml): HUTN development tools
+- [org.eclipse.epsilon.picto.feature/src/main/resources/feature.xml](org.eclipse.epsilon.picto.feature/src/main/resources/feature.xml): Picto model visualization
+- [org.eclipse.epsilon.sirius.widget.feature/src/main/resources/feature.xml](org.eclipse.epsilon.sirius.widget.feature/src/main/resources/feature.xml): Sirius widget for embedding Epsilon in Sirius
+
+## Modules — Update Site
+
+- [site/pom.xml](site/pom.xml): P2 site generation aggregating 112+ artifacts with p2-maven-plugin
+- [site/category.xml](site/category.xml): P2 update site category definitions (17 categories)
+
+## Optional
+
+- [.github/workflows/build.yml](.github/workflows/build.yml): CI/CD build pipeline
+- [.github/workflows/release.yml](.github/workflows/release.yml): Release orchestration pipeline
